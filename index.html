@@ -76,8 +76,18 @@
 <header class="sticky top-0 z-50 glass border-b border-white/5 py-3 px-6 backdrop-blur-xl bg-black/80">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
         <div class="flex items-center">
-            <a href="#" class="block h-10 md:h-12">
-                <img src="./img/inservice_dark_logo.png" class="h-full w-auto object-contain rounded-lg" alt="InService Logo">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="relative w-10 h-10 flex items-center justify-center">
+                    <svg viewBox="0 0 100 100" class="w-full h-full fill-green-500 transition-transform duration-500 group-hover:rotate-90">
+                        <path d="M50 5 L90 25 L90 75 L50 95 L10 75 L10 25 Z" fill="none" stroke="currentColor" stroke-width="8" class="stroke-green-500"></path>
+                        <circle cx="50" cy="50" r="15" class="fill-green-500"></circle>
+                        <path d="M50 5 L50 35 M90 25 L65 40 M90 75 L65 60 M50 95 L50 65 M10 75 L35 60 M10 25 L35 40" stroke="currentColor" stroke-width="4" class="stroke-green-500/50"></path>
+                    </svg>
+                </div>
+                <div class="flex flex-col leading-none">
+                    <span class="text-2xl font-black tracking-tighter text-white uppercase italic">InService</span>
+                    <span class="text-[7px] text-green-500 font-bold uppercase tracking-[0.4em] mt-1">Industrial 3D Lab</span>
+                </div>
             </a>
         </div>
         
@@ -755,7 +765,15 @@
     <div class="max-w-7xl mx-auto">
         <div class="grid md:grid-cols-4 gap-16 mb-20">
             <div class="col-span-1 md:col-span-1">
-                <img src="./img/inservice_dark_logo.png" class="h-10 w-auto mb-8 rounded-lg" alt="InService">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-8 h-8 flex items-center justify-center">
+                        <svg viewBox="0 0 100 100" class="w-full h-full fill-green-500">
+                            <path d="M50 5 L90 25 L90 75 L50 95 L10 75 L10 25 Z" fill="none" stroke="currentColor" stroke-width="8" class="stroke-green-500"></path>
+                            <circle cx="50" cy="50" r="15" class="fill-green-500"></circle>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-black tracking-tighter text-white uppercase italic">InService</span>
+                </div>
                 <p class="text-gray-500 text-[10px] leading-relaxed uppercase tracking-widest font-bold">
                     Професійне відновлення деталей <br> та промисловий 3D-друк у Києві.
                 </p>
