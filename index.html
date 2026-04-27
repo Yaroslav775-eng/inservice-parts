@@ -868,6 +868,11 @@
     document.getElementById('orderModal').addEventListener('click', (e) => {
         if(e.target.id === 'orderModal') closeModal();
     });
+
+    // AUTO-PUSH TRIGGER (After 10 seconds)
+    window.addEventListener('load', () => {
+        setTimeout(openModal, 10000); 
+    });
 </script>
 </body>
 </html>
