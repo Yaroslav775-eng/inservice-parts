@@ -5,21 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Виготовлення деталей | InService</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { scroll-behavior: smooth; }
+    .messenger-btn:hover { transform: scale(1.1); }
+  </style>
 </head>
 
 <body class="bg-gray-950 text-white font-sans">
 
 <!-- HEADER -->
-<header class="bg-black border-b border-gray-800">
+<header class="bg-black border-b border-gray-800 sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
     <h1 class="text-2xl font-bold text-green-400">InService</h1>
-    <a href="#contact" class="bg-green-500 px-4 py-2 rounded-lg font-semibold hover:bg-green-600">Зв’язатись</a>
+    <a href="#contact" class="bg-green-500 px-4 py-2 rounded-lg font-semibold hover:bg-green-600 transition">Зв’язатись</a>
   </div>
 </header>
 
 <!-- HERO -->
 <section class="relative text-center py-24 px-6">
-  <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df37"
+  <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df37?auto=format&fit=crop&q=80&w=1200"
        class="absolute inset-0 w-full h-full object-cover opacity-20">
 
   <div class="relative z-10">
@@ -29,7 +33,7 @@
     <p class="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
       Відновлюємо пластикові деталі для будь-якої техніки. Доставка по Україні.
     </p>
-    <a href="#contact" class="bg-green-500 px-8 py-4 text-lg rounded-xl font-semibold hover:bg-green-600">
+    <a href="#contact" class="bg-green-500 px-8 py-4 text-lg rounded-xl font-semibold hover:bg-green-600 transition shadow-lg shadow-green-500/20">
       Отримати консультацію
     </a>
   </div>
@@ -38,16 +42,16 @@
 <!-- ABOUT -->
 <section class="py-20 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
   
-  <img src="https://images.unsplash.com/photo-1563770660941-10a636076c68"
-       class="rounded-xl shadow-lg">
+  <img src="https://images.unsplash.com/photo-1563770660941-10a636076c68?auto=format&fit=crop&q=80&w=800"
+       class="rounded-xl shadow-2xl border border-gray-800">
 
   <div>
     <h2 class="text-3xl font-bold mb-6">Рішення замість заміни</h2>
-    <p class="text-gray-400 mb-4">
+    <p class="text-gray-400 mb-4 text-lg">
       Ми не просто друкуємо — ми відновлюємо деталі, яких немає в продажу.
     </p>
-    <p class="text-gray-400">
-      Це дешевше і швидше, ніж купувати нову техніку або чекати доставку.
+    <p class="text-gray-400 text-lg leading-relaxed">
+      Це дешевше і швидше, ніж купувати нову техніку або чекати на доставку оригіналу з-за кордону.
     </p>
   </div>
 
@@ -56,31 +60,34 @@
 <!-- SERVICES -->
 <section class="bg-gray-900 py-20 px-6">
   <div class="max-w-7xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-12">Що ми виготовляємо</h2>
+    <h2 class="text-3xl font-bold text-center mb-12 uppercase tracking-wider">Що ми виготовляємо</h2>
 
     <div class="grid md:grid-cols-3 gap-8">
 
-      <div class="bg-black rounded-xl overflow-hidden border border-gray-800">
-        <img src="https://images.unsplash.com/photo-1593642532871-8b12e02d091c" class="h-48 w-full object-cover">
-        <div class="p-6">
-          <h3 class="text-xl text-green-400 mb-2">Шестерні</h3>
-          <p class="text-gray-400">Для кавомашин, техніки та редукторів</p>
+      <!-- Шестерні -->
+      <div class="bg-black rounded-2xl overflow-hidden border border-gray-800 hover:border-green-500/50 transition group">
+        <img src="https://images.unsplash.com/photo-1593642532871-8b12e02d091c?auto=format&fit=crop&q=80&w=600" class="h-56 w-full object-cover group-hover:scale-105 transition duration-500">
+        <div class="p-6 text-center">
+          <h3 class="text-xl text-green-400 font-bold mb-2">Шестерні</h3>
+          <p class="text-gray-400">Для кавомашин, побутової техніки та редукторів</p>
         </div>
       </div>
 
-      <div class="bg-black rounded-xl overflow-hidden border border-gray-800">
-        <img src="https://images.unsplash.com/photo-1581090700227-1e8a1b5f3c85" class="h-48 w-full object-cover">
-        <div class="p-6">
-          <h3 class="text-xl text-green-400 mb-2">Кріплення</h3>
-          <p class="text-gray-400">ТВ, пилососи, корпусні елементи</p>
+      <!-- Кріплення -->
+      <div class="bg-black rounded-2xl overflow-hidden border border-gray-800 hover:border-green-500/50 transition group">
+        <img src="https://images.unsplash.com/photo-1531287333317-18f192b9b17c?auto=format&fit=crop&q=80&w=600" class="h-56 w-full object-cover group-hover:scale-105 transition duration-500">
+        <div class="p-6 text-center">
+          <h3 class="text-xl text-green-400 font-bold mb-2">Кріплення</h3>
+          <p class="text-gray-400">ТВ, пилососи, корпусні елементи та тримачі</p>
         </div>
       </div>
 
-      <div class="bg-black rounded-xl overflow-hidden border border-gray-800">
-        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc" class="h-48 w-full object-cover">
-        <div class="p-6">
-          <h3 class="text-xl text-green-400 mb-2">Корпуси</h3>
-          <p class="text-gray-400">Електроніка та захисні елементи</p>
+      <!-- Корпуси -->
+      <div class="bg-black rounded-2xl overflow-hidden border border-gray-800 hover:border-green-500/50 transition group">
+        <img src="https://images.unsplash.com/photo-1591123720164-de1348028a82?auto=format&fit=crop&q=80&w=600" class="h-56 w-full object-cover group-hover:scale-105 transition duration-500">
+        <div class="p-6 text-center">
+          <h3 class="text-xl text-green-400 font-bold mb-2">Корпуси</h3>
+          <p class="text-gray-400">Електроніка, пульти та захисні елементи</p>
         </div>
       </div>
 
@@ -90,24 +97,24 @@
 
 <!-- PROCESS -->
 <section class="py-20 px-6 max-w-6xl mx-auto text-center">
-  <h2 class="text-3xl font-bold mb-10">Як це працює</h2>
+  <h2 class="text-3xl font-bold mb-16">Як це працює</h2>
 
-  <div class="grid md:grid-cols-4 gap-6 text-gray-400">
-    <div>
-      <p class="text-green-400 text-xl font-bold">1</p>
-      <p>Надсилаєте фото або деталь</p>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+    <div class="flex flex-col items-center">
+      <div class="w-12 h-12 bg-green-500/10 rounded-full flex items-center justify-center mb-4 text-green-400 font-bold text-2xl border border-green-500/30">1</div>
+      <p class="text-gray-400 font-medium">Надсилаєте фото або деталь</p>
     </div>
-    <div>
-      <p class="text-green-400 text-xl font-bold">2</p>
-      <p>Ми моделюємо</p>
+    <div class="flex flex-col items-center">
+      <div class="w-12 h-12 bg-green-500/10 rounded-full flex items-center justify-center mb-4 text-green-400 font-bold text-2xl border border-green-500/30">2</div>
+      <p class="text-gray-400 font-medium">Ми моделюємо 3D-макет</p>
     </div>
-    <div>
-      <p class="text-green-400 text-xl font-bold">3</p>
-      <p>Друкуємо</p>
+    <div class="flex flex-col items-center">
+      <div class="w-12 h-12 bg-green-500/10 rounded-full flex items-center justify-center mb-4 text-green-400 font-bold text-2xl border border-green-500/30">3</div>
+      <p class="text-gray-400 font-medium">Друкуємо деталь</p>
     </div>
-    <div>
-      <p class="text-green-400 text-xl font-bold">4</p>
-      <p>Відправляємо</p>
+    <div class="flex flex-col items-center">
+      <div class="w-12 h-12 bg-green-500/10 rounded-full flex items-center justify-center mb-4 text-green-400 font-bold text-2xl border border-green-500/30">4</div>
+      <p class="text-gray-400 font-medium">Відправляємо вам</p>
     </div>
   </div>
 </section>
@@ -115,58 +122,67 @@
 <!-- BEFORE AFTER -->
 <section class="bg-gray-900 py-20 px-6">
   <div class="max-w-7xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-12">Було / Стало</h2>
+    <h2 class="text-3xl font-bold mb-12">Приклади відновлення</h2>
 
     <div class="grid md:grid-cols-2 gap-8">
-      <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db" class="rounded-xl">
-      <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0" class="rounded-xl">
+      <div class="relative rounded-2xl overflow-hidden border border-gray-800">
+        <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&q=80&w=800" class="w-full h-80 object-cover">
+        <div class="absolute bottom-4 left-4 bg-black/70 px-3 py-1 rounded text-sm uppercase">Оригінал (зламано)</div>
+      </div>
+      <div class="relative rounded-2xl overflow-hidden border border-gray-800">
+        <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&q=80&w=800" class="w-full h-80 object-cover">
+        <div class="absolute bottom-4 left-4 bg-green-500/80 px-3 py-1 rounded text-sm uppercase font-bold text-black">Результат InService</div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="bg-green-500 text-black py-16 text-center">
-  <h2 class="text-3xl font-bold mb-4">Не купуйте нову техніку</h2>
-  <p class="mb-6">Ми відновимо вашу деталь швидко і вигідно</p>
-  <a href="#contact" class="bg-black text-white px-8 py-4 rounded-xl font-semibold">
-    Замовити
-  </a>
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-4 uppercase">Не купуйте нову техніку</h2>
+    <p class="text-lg mb-8 opacity-90">Ми відновимо вашу деталь швидко, якісно та за вигідною ціною</p>
+    <a href="#contact" class="bg-black text-white px-10 py-5 rounded-2xl font-bold text-xl hover:scale-105 transition shadow-2xl">
+      Замовити розрахунок
+    </a>
+  </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="py-20 px-6 max-w-3xl mx-auto">
-  <h2 class="text-3xl font-bold text-center mb-10">Залишити заявку</h2>
+  <h2 class="text-3xl font-bold text-center mb-12">Залишити заявку</h2>
 
   <form class="space-y-4">
-    <input type="text" placeholder="Ім’я"
-      class="w-full p-4 bg-gray-900 border border-gray-800 rounded-lg">
+    <input type="text" placeholder="Ваше ім’я"
+      class="w-full p-4 bg-gray-900 border border-gray-800 rounded-xl focus:border-green-500 outline-none transition">
 
-    <input type="tel" placeholder="Телефон"
-      class="w-full p-4 bg-gray-900 border border-gray-800 rounded-lg">
+    <input type="tel" placeholder="Номер телефону"
+      class="w-full p-4 bg-gray-900 border border-gray-800 rounded-xl focus:border-green-500 outline-none transition">
 
-    <textarea placeholder="Опишіть проблему"
-      class="w-full p-4 bg-gray-900 border border-gray-800 rounded-lg h-32"></textarea>
+    <textarea placeholder="Яка деталь вам потрібна?"
+      class="w-full p-4 bg-gray-900 border border-gray-800 rounded-xl h-32 focus:border-green-500 outline-none transition"></textarea>
 
-    <button class="w-full bg-green-500 p-4 rounded-lg font-semibold hover:bg-green-600">
-      Відправити
+    <button type="submit" class="w-full bg-green-500 p-4 rounded-xl font-bold text-black text-lg hover:bg-green-400 transition shadow-lg shadow-green-500/20">
+      Відправити запит
     </button>
   </form>
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-black py-6 text-center text-gray-500 border-t border-gray-800">
-  InService © 2026
+<footer class="bg-black py-10 text-center text-gray-500 border-t border-gray-900">
+  <div class="text-2xl font-bold text-green-400 mb-4">InService</div>
+  <p class="text-sm">InService © 2026 • Професійне відновлення деталей</p>
 </footer>
+
 <!-- MESSENGER BUTTON -->
-  <div style="position: fixed; bottom: 30px; right: 30px; z-index: 9999;">
-      <a href="https://t.me/your_telegram" target="_blank" 
-       style="background-color: #0088cc; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: transform 0.3s;"
-             onmouseover="this.style.transform='scale(1.1)'"
-             onmouseout="this.style.transform='scale(1)'">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-14h.1a8.38 8.38 0 0 1 3.8.9L22 2l-1.5 5.5Z"></path>
-            </svg>
-      </a>
-  </div>
-</
+<div class="messenger-btn" style="position: fixed; bottom: 30px; right: 30px; z-index: 9999; transition: transform 0.3s;">
+  <a href="https://t.me/your_telegram" target="_blank" 
+     style="background-color: #0088cc; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,0,0,0.4); border: 2px solid white;">
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-14h.1a8.38 8.38 0 0 1 3.8.9L22 2l-1.5 5.5Z"></path>
+    </svg>
+  </a>
+</div>
+
+</body>
 </html>
