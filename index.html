@@ -20,9 +20,25 @@
     .btn-primary:hover { background: #34d399; transform: translateY(-2px); }
     .card-shadow { box-shadow: 0 20px 50px -20px rgba(0,0,0,0.5); }
     .badge-gradient { background: linear-gradient(90deg, #10b981, #34d399); }
-    .modal-backdrop { transition: opacity 0.3s ease; opacity: 0; }
-    .modal-backdrop.active { opacity: 1; }
-  </style>
+    <style>
+      /* PREMIUM MODAL ANIMATION */
+      #orderModal { 
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        pointer-events: none;
+        opacity: 0;
+      }
+      #orderModal.active { 
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .modal-content {
+        transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        transform: scale(0.9) translateY(20px);
+      }
+      #orderModal.active .modal-content {
+        transform: scale(1) translateY(0);
+      }
+    </style>
 </head>
 
 <body class="selection:bg-green-500/30">
@@ -844,12 +860,14 @@
     function openModal() {
         const modal = document.getElementById('orderModal');
         modal.classList.remove('hidden');
-        setTimeout(() => modal.style.opacity = '1', 10);
+        // Small delay to trigger transition
+        setTimeout(() => modal.classList.add('active'), 10);
     }
     function closeModal() {
         const modal = document.getElementById('orderModal');
-        modal.style.opacity = '0';
-        setTimeout(() => modal.classList.add('hidden'), 300);
+        modal.classList.remove('active');
+        // Wait for animation to finish before hiding
+        setTimeout(() => modal.classList.add('hidden'), 500);
     }
 
     // Catch all 'Розрахунок' buttons
@@ -864,7 +882,7 @@
         });
     });
 
-    // Close on backdrop
+    // Close on backdrop click
     document.getElementById('orderModal').addEventListener('click', (e) => {
         if(e.target.id === 'orderModal') closeModal();
     });
