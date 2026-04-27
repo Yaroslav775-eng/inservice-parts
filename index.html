@@ -333,28 +333,72 @@
     </div>
 </section>
 
-<!-- BEFORE / AFTER -->
-<section class="py-24 px-6 border-b border-white/5">
-    <div class="max-w-5xl mx-auto glass p-10 md:p-16 rounded-[3rem] border border-white/10 reveal">
-        <h2 class="text-3xl font-black mb-12 uppercase tracking-tighter text-center">Результат відновлення деталей</h2>
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="grid grid-cols-1 gap-6">
-                <div class="relative rounded-2xl overflow-hidden border border-white/10 aspect-video group">
-                    <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?q=80&w=800" class="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 transition duration-700">
-                    <div class="absolute top-4 left-4 bg-red-500/90 px-4 py-1 rounded-lg text-[10px] font-black uppercase text-white shadow-xl">Було</div>
-                </div>
-                <div class="relative rounded-2xl overflow-hidden border border-green-500/30 aspect-video group">
-                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
-                    <div class="absolute top-4 left-4 bg-green-500/90 px-4 py-1 rounded-lg text-[10px] font-black uppercase text-black shadow-xl">Стало</div>
+<!-- MATERIALS LIBRARY -->
+<section id="materials" class="py-32 px-6 border-y border-white/5">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-20 items-center mb-24">
+            <div class="reveal">
+                <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none mb-8 text-white">Понад 20 видів <br> <span class="text-green-500">інженерних пластиків</span></h2>
+                <p class="text-gray-400 text-lg leading-relaxed mb-10">
+                    Підбираємо матеріал під ваші умови експлуатації: від гнучких ущільнювачів до надміцних шестерень, що працюють у маслі та при високих температурах.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <div class="bg-green-500/10 text-green-500 px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest border border-green-500/20">Нейлон (PA)</div>
+                    <div class="bg-white/5 text-white/50 px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest border border-white/10">Carbon Fiber</div>
+                    <div class="bg-white/5 text-white/50 px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest border border-white/10">TPU Elastic</div>
+                    <div class="bg-white/5 text-white/50 px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest border border-white/10">PETG / ABS+</div>
                 </div>
             </div>
-            <div class="text-center md:text-left">
-                <div class="text-5xl md:text-6xl font-black text-green-500 mb-6 leading-none uppercase tracking-tighter">Економія <br> до 80%</div>
-                <p class="text-gray-400 text-lg leading-relaxed font-bold">
-                    Зекономили клієнту до 80% вартості за рахунок професійного 3D-друку деталей та виготовлення запчастин. Ми відновлюємо функціональність без зайвих витрат.
-                </p>
-                <div class="mt-8">
-                    <a href="#contact" class="btn-primary px-8 py-4 rounded-xl text-black font-black uppercase text-xs tracking-widest">Хочу такий результат</a>
+            <div class="grid grid-cols-2 gap-4 reveal">
+                <!-- Mat 1 -->
+                <div class="glass p-8 rounded-3xl border border-white/5 group hover:border-green-500/30 transition">
+                    <div class="text-3xl mb-4">⚙️</div>
+                    <h4 class="text-white font-bold uppercase text-xs tracking-widest mb-2">Нейлон (PA6/12)</h4>
+                    <p class="text-gray-500 text-[9px] leading-relaxed">Максимальна зносостійкість. Для шестерень, підшипників ковзання та втулок.</p>
+                </div>
+                <!-- Mat 2 -->
+                <div class="glass p-8 rounded-3xl border border-white/5 group hover:border-green-500/30 transition">
+                    <div class="text-3xl mb-4">💎</div>
+                    <h4 class="text-white font-bold uppercase text-xs tracking-widest mb-2">Фотополімер</h4>
+                    <p class="text-gray-500 text-[9px] leading-relaxed">Точність до 0.02 мм. Для стоматології, кнопок та дрібних механізмів.</p>
+                </div>
+                <!-- Mat 3 -->
+                <div class="glass p-8 rounded-3xl border border-white/5 group hover:border-green-500/30 transition">
+                    <div class="text-3xl mb-4">🏎️</div>
+                    <h4 class="text-white font-bold uppercase text-xs tracking-widest mb-2">Carbon (CF)</h4>
+                    <p class="text-gray-500 text-[9px] leading-relaxed">Надміцний композит. Вага менша за алюміній, жорсткість — вища.</p>
+                </div>
+                <!-- Mat 4 -->
+                <div class="glass p-8 rounded-3xl border border-white/5 group hover:border-green-500/30 transition">
+                    <div class="text-3xl mb-4">💧</div>
+                    <h4 class="text-white font-bold uppercase text-xs tracking-widest mb-2">TPU (Flex)</h4>
+                    <p class="text-gray-500 text-[9px] leading-relaxed">Гнучкий як гума. Для прокладок, демпферів та захисних чохлів.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECURITY & NDA -->
+<section class="py-24 px-6 bg-green-500">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 reveal">
+        <div class="max-w-xl">
+            <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-none text-black mb-6">Безпека та конфіденційність</h2>
+            <p class="text-black/80 text-lg font-medium">Ми розуміємо важливість ваших розробок. Працюємо офіційно через договір та обов'язково укладаємо NDA.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 shrink-0">
+            <div class="bg-black p-8 rounded-2xl flex items-center gap-4">
+                <div class="text-green-500 text-2xl">📝</div>
+                <div>
+                    <div class="text-white font-bold uppercase text-[10px] tracking-widest">Укладаємо NDA</div>
+                    <div class="text-gray-500 text-[9px]">Ваші креслення під захистом</div>
+                </div>
+            </div>
+            <div class="bg-black p-8 rounded-2xl flex items-center gap-4">
+                <div class="text-green-500 text-2xl">🛡️</div>
+                <div>
+                    <div class="text-white font-bold uppercase text-[10px] tracking-widest">Гарантія 1 рік</div>
+                    <div class="text-gray-500 text-[9px]">Повна техпідтримка</div>
                 </div>
             </div>
         </div>
