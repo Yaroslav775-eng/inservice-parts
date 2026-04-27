@@ -149,53 +149,87 @@
     </div>
 </section>
 
-<!-- EQUIPMENT & TECH -->
-<section id="equipment" class="py-24 px-6 border-b border-white/5 bg-black/40">
+<!-- VISUAL EQUIPMENT PARK -->
+<section id="equipment" class="py-32 px-6 bg-[#030303] border-b border-white/5">
     <div class="max-w-7xl mx-auto">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-            <div class="reveal">
-                <h2 class="text-4xl md:text-5xl font-black mb-8 uppercase tracking-tighter leading-none">Промислова <br> <span class="text-green-500">точність друку</span></h2>
-                <p class="text-gray-400 text-lg mb-10 leading-relaxed font-medium">
-                    Ми використовуємо професійне обладнання (Bambu Lab, Voron), що дозволяє досягти точності до 0.05 мм. Це гарантує, що відновлена деталь сяде "як рідна" без доопрацювань.
+        <div class="text-center mb-24 reveal">
+            <p class="text-green-500 font-bold uppercase text-[10px] tracking-[0.4em] mb-4">Технічний парк</p>
+            <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-none text-white">
+                Виготовляємо продукцію на <br> <span class="text-green-500">високотехнологічних 3D принтерах</span>
+            </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 reveal">
+            <!-- Printer 1 -->
+            <div class="text-center group">
+                <div class="relative mb-10 inline-block">
+                    <div class="absolute inset-0 bg-green-500/20 blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition duration-700"></div>
+                    <img src="https://images.unsplash.com/photo-1638191884488-013069cc069e?q=80&w=400" class="relative w-64 h-64 object-contain mx-auto transition duration-700 group-hover:scale-110" alt="Bambu Lab X1 Carbon">
+                </div>
+                <h4 class="text-xl font-black text-white uppercase tracking-tighter mb-4">Bambu Lab Carbon X1</h4>
+                <p class="text-gray-500 text-[11px] leading-relaxed max-w-xs mx-auto">
+                    Високошвидкісний FDM принтер для будь-яких завдань. Оснащений системою AMS для друку багатокомпонентних виробів з різних матеріалів одночасно.
                 </p>
-                <div class="space-y-6">
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center text-green-500 shrink-0">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-bold uppercase text-xs tracking-widest mb-1">FDM Станції (Висока міцність)</h4>
-                            <p class="text-gray-500 text-[10px]">Для силових деталей: шестерні, вали, кронштейни. Матеріали: Nylon, Carbon, ABS+.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center text-green-500 shrink-0">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-bold uppercase text-xs tracking-widest mb-1">SLA Станції (Ювелірна точність)</h4>
-                            <p class="text-gray-500 text-[10px]">Для дрібних механізмів: кнопки, засувки, лицьові панелі техніки.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <div class="grid grid-cols-2 gap-4 reveal" style="transition-delay: 0.2s">
-                <div class="glass p-8 rounded-3xl border border-white/5 flex flex-col justify-center items-center text-center bg-black/50">
-                    <div class="text-3xl font-black text-green-500 mb-2 tracking-tighter">0.05</div>
-                    <div class="text-[8px] font-bold uppercase tracking-[0.2em] text-gray-500">Міліметрів <br> похибка</div>
+
+            <!-- Printer 2 -->
+            <div class="text-center group">
+                <div class="relative mb-10 inline-block">
+                    <div class="absolute inset-0 bg-blue-500/10 blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition duration-700"></div>
+                    <img src="https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=400" class="relative w-64 h-64 object-contain mx-auto transition duration-700 group-hover:scale-110" alt="Formlabs Form 3">
                 </div>
-                <div class="glass p-8 rounded-3xl border border-white/5 flex flex-col justify-center items-center text-center bg-black/50">
-                    <div class="text-3xl font-black text-green-500 mb-2 tracking-tighter">300°C</div>
-                    <div class="text-[8px] font-bold uppercase tracking-[0.2em] text-gray-500">Температура <br> друку</div>
+                <h4 class="text-xl font-black text-white uppercase tracking-tighter mb-4">Formlabs Form 3</h4>
+                <p class="text-gray-500 text-[11px] leading-relaxed max-w-xs mx-auto">
+                    Фотополімерний SLA принтер. Точність шару до 25 мікрон. Ідеально підходить для створення дрібних деталей з високою деталізацією.
+                </p>
+            </div>
+
+            <!-- Printer 3 -->
+            <div class="text-center group">
+                <div class="relative mb-10 inline-block">
+                    <div class="absolute inset-0 bg-green-500/10 blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition duration-700"></div>
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=400" class="relative w-64 h-64 object-contain mx-auto transition duration-700 group-hover:scale-110" alt="Creality K1 Max">
                 </div>
-                <div class="glass p-8 rounded-3xl border border-white/5 flex flex-col justify-center items-center text-center bg-black/50">
-                    <div class="text-3xl font-black text-green-500 mb-2 tracking-tighter">24/7</div>
-                    <div class="text-[8px] font-bold uppercase tracking-[0.2em] text-gray-500">Безперервна <br> робота</div>
+                <h4 class="text-xl font-black text-white uppercase tracking-tighter mb-4">Creality K1 Max</h4>
+                <p class="text-gray-500 text-[11px] leading-relaxed max-w-xs mx-auto">
+                    3D принтер з великим робочим полем. Оснащений AI-камерою для контролю процесу та автоматичним калібруванням для стабільної якості.
+                </p>
+            </div>
+
+            <!-- Printer 4 -->
+            <div class="text-center group">
+                <div class="relative mb-10 inline-block">
+                    <div class="absolute inset-0 bg-green-500/10 blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition duration-700"></div>
+                    <img src="https://images.unsplash.com/photo-1615811361523-6bd03d7748e7?q=80&w=400" class="relative w-64 h-64 object-contain mx-auto transition duration-700 group-hover:scale-110" alt="Tiertime X5">
                 </div>
-                <div class="glass p-8 rounded-3xl border border-white/5 flex flex-col justify-center items-center text-center bg-black/50">
-                    <div class="text-3xl font-black text-green-500 mb-2 tracking-tighter">10+</div>
-                    <div class="text-[8px] font-bold uppercase tracking-[0.2em] text-gray-500">Типів <br> пластику</div>
+                <h4 class="text-xl font-black text-white uppercase tracking-tighter mb-4">Tiertime x5</h4>
+                <p class="text-gray-500 text-[11px] leading-relaxed max-w-xs mx-auto">
+                    Справжній прорив у цифровому 3D-друці. Здатний забезпечити максимальну надійність та повторюваність для серійного виробництва.
+                </p>
+            </div>
+
+            <!-- Printer 5 -->
+            <div class="text-center group">
+                <div class="relative mb-10 inline-block">
+                    <div class="absolute inset-0 bg-white/5 blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition duration-700"></div>
+                    <img src="https://images.unsplash.com/photo-1593642532871-8b12e02d091c?q=80&w=400" class="relative w-64 h-64 object-contain mx-auto transition duration-700 group-hover:scale-110" alt="Picaso 3D Designer">
                 </div>
+                <h4 class="text-xl font-black text-white uppercase tracking-tighter mb-4">PICASO Designer XL</h4>
+                <p class="text-gray-500 text-[11px] leading-relaxed max-w-xs mx-auto">
+                    Друкує всіма доступними філаментами: ABS, Nylon, Carbon (GF/CF), PEEK, ULTEM. Для деталей з екстремальною міцністю.
+                </p>
+            </div>
+
+            <!-- Printer 6 -->
+            <div class="text-center group">
+                <div class="relative mb-10 inline-block">
+                    <div class="absolute inset-0 bg-green-500/10 blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition duration-700"></div>
+                    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=400" class="relative w-64 h-64 object-contain mx-auto transition duration-700 group-hover:scale-110" alt="Onsint SM200">
+                </div>
+                <h4 class="text-xl font-black text-white uppercase tracking-tighter mb-4">ONSINT SM200</h4>
+                <p class="text-gray-500 text-[11px] leading-relaxed max-w-xs mx-auto">
+                    Настільний принтер для селективного лазерного спікання (SLS). Для створення високоміцних деталей зі складними внутрішніми каналами.
+                </p>
             </div>
         </div>
     </div>
