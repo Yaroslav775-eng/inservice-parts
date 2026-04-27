@@ -3,292 +3,209 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InService | Професійне відновлення деталей 3D-друком</title>
+  <title>InService | Інженерне відновлення деталей 3D-друком</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; color: #e5e7eb; }
-    .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); }
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; color: #f3f4f6; }
+    .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.08); }
     .text-gradient { background: linear-gradient(to right, #fff, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    
-    /* FAQ Animation */
-    details summary::-webkit-details-marker { display:none; }
-    details[open] summary svg { transform: rotate(180deg); }
-    
-    /* Scroll Animation */
-    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+    .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
     .reveal.active { opacity: 1; transform: translateY(0); }
-
     .btn-primary { 
       background: #10b981; 
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.5);
+      transition: all 0.3s;
+      box-shadow: 0 8px 25px -5px rgba(16, 185, 129, 0.4);
     }
-    .btn-primary:hover { 
-      background: #34d399; 
-      transform: translateY(-2px); 
-      box-shadow: 0 15px 35px -10px rgba(16, 185, 129, 0.6);
-    }
+    .btn-primary:hover { background: #34d399; transform: translateY(-1px); }
   </style>
 </head>
 
-<body class="bg-[#030303] text-gray-200 selection:bg-green-500/30">
+<body class="bg-[#050505] selection:bg-green-500/30">
 
 <!-- HEADER -->
-<header class="bg-black/90 backdrop-blur-2xl border-b border-white/5 sticky top-0 z-50">
+<header class="bg-black/90 backdrop-blur-xl border-b border-white/5 sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="flex items-center gap-4">
-        <div class="flex flex-col">
-            <div class="flex items-center gap-1.5">
-                <span class="w-7 h-7 bg-green-500 rounded-sm flex items-center justify-center text-black font-black italic">I</span>
-                <span class="text-xl font-black tracking-tighter text-white uppercase">Service</span>
-            </div>
-            <span class="text-[8px] text-green-500/80 font-bold uppercase tracking-[0.3em] mt-1.5">Kyiv // Lab 3D</span>
+    <div class="flex items-center gap-3">
+        <div class="w-7 h-7 bg-green-500 rounded flex items-center justify-center text-black font-black italic">I</div>
+        <div class="flex flex-col leading-none">
+            <span class="text-lg font-black tracking-tighter text-white uppercase">Service</span>
+            <span class="text-[7px] text-green-500 font-bold uppercase tracking-[0.4em]">Kyiv Lab</span>
         </div>
     </div>
-    
-    <nav class="hidden lg:flex gap-12 text-[10px] font-black uppercase tracking-[0.25em] text-gray-500">
-        <a href="#services" class="hover:text-green-400 transition-colors">Послуги</a>
-        <a href="#process" class="hover:text-green-400 transition-colors">Процес</a>
-        <a href="#faq" class="hover:text-green-400 transition-colors">FAQ</a>
-    </nav>
-
-    <div class="flex items-center gap-6">
-        <div class="hidden sm:flex flex-col items-end mr-4">
-            <a href="tel:+380670000000" class="text-sm font-black text-white tracking-tighter">+38 067 000 00 00</a>
-            <span class="text-[8px] text-green-500/60 font-bold uppercase tracking-widest">Пн-Пт: 09:00 - 19:00</span>
-        </div>
-        <a href="#contact" class="btn-primary px-7 py-3 rounded-sm text-black font-black text-[10px] uppercase tracking-widest">
-          Замовити
-        </a>
+    <div class="hidden md:flex gap-10 text-[9px] font-black uppercase tracking-widest text-gray-500">
+        <a href="#optimization" class="hover:text-green-400 transition">Переваги</a>
+        <a href="#services" class="hover:text-green-400 transition">Послуги</a>
+        <a href="#business" class="hover:text-green-400 transition">Для бізнесу</a>
     </div>
+    <a href="#contact" class="btn-primary px-6 py-2.5 rounded-full text-black font-black text-[10px] uppercase tracking-widest">
+      Прорахунок
+    </a>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="relative min-h-[90vh] flex items-center px-6 overflow-hidden">
-  <div class="absolute -top-24 -right-24 w-[600px] h-[600px] bg-green-500/5 blur-[150px] rounded-full"></div>
+<section class="relative min-h-[85vh] flex items-center px-6 border-b border-white/5">
   <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1600&auto=format&fit=crop"
-       class="absolute inset-0 w-full h-full object-cover opacity-5 pointer-events-none scale-105">
+       class="absolute inset-0 w-full h-full object-cover opacity-5 pointer-events-none">
 
-  <div class="relative z-10 max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-20 items-center">
+  <div class="relative z-10 max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-16 items-center">
     <div class="reveal">
-        <div class="inline-flex items-center gap-3 px-4 py-1.5 bg-green-500/5 rounded-full border border-green-500/20 mb-10">
-            <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
-            <span class="text-[9px] font-black text-green-400 uppercase tracking-[0.3em]">Відновлення запчастин будь-якої складності</span>
-        </div>
-        <h2 class="text-6xl md:text-8xl font-black mb-10 leading-[0.85] tracking-tighter uppercase text-gradient">
-            Зламалась <br> деталь? <br> <span class="text-green-500">Ми зробимо <br> нову.</span>
+        <h2 class="text-6xl md:text-8xl font-black mb-8 leading-[0.85] tracking-tighter uppercase text-gradient">
+            Не просто <br> копія. <br> <span class="text-green-500 text-shadow-lg">Краще за <br> оригінал.</span>
         </h2>
-        <p class="text-gray-400 text-lg md:text-xl mb-12 max-w-lg leading-relaxed font-medium">
-            Не чекайте тижнями на доставку запчастин. Ми виготовляємо точні копії на 3D-принтері за 24 години в Києві.
+        <p class="text-gray-400 text-lg md:text-xl mb-12 max-w-lg leading-relaxed">
+            Ми відновлюємо деталі за допомогою промислового 3D-друку, посилюючи конструкцію там, де вона зламалася.
         </p>
-        <div class="flex flex-col sm:flex-row gap-6 items-center">
-            <a href="#contact" class="btn-primary w-full sm:w-auto px-12 py-6 rounded-sm text-black font-black uppercase tracking-widest text-sm">
-                Дізнатись ціну за 15 хв
+        <div class="flex flex-col sm:flex-row gap-6">
+            <a href="#contact" class="btn-primary px-12 py-5 rounded-2xl text-black font-black uppercase tracking-widest text-sm text-center">
+                Отримати ціну за фото
             </a>
-            <div class="flex items-center gap-4 text-gray-500">
-                <div class="flex -space-x-3">
-                    <div class="w-10 h-10 rounded-full border-2 border-black bg-gray-800 flex items-center justify-center font-bold text-[10px]">A</div>
-                    <div class="w-10 h-10 rounded-full border-2 border-black bg-gray-700 flex items-center justify-center font-bold text-[10px]">B</div>
-                    <div class="w-10 h-10 rounded-full border-2 border-black bg-gray-600 flex items-center justify-center font-bold text-[10px]">C</div>
-                </div>
-                <span class="text-[10px] font-black uppercase tracking-widest leading-none">1200+ клієнтів <br> врятували техніку</span>
+            <div class="flex items-center gap-4 text-gray-500 text-[10px] font-bold uppercase tracking-widest">
+                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                Київ, Поділ // Відправка по Україні
             </div>
         </div>
     </div>
-    <div class="relative hidden lg:block reveal" style="transition-delay: 0.2s">
-        <div class="glass p-8 rounded-[2.5rem] border border-white/5 rotate-2 hover:rotate-0 transition-transform duration-700">
-            <img src="https://images.unsplash.com/photo-1563770660941-10a636076c68?q=80&w=800&auto=format&fit=crop" 
-                 class="rounded-3xl grayscale hover:grayscale-0 transition duration-1000">
-        </div>
-        <div class="absolute top-10 -left-10 glass p-6 rounded-2xl border border-green-500/20 bg-green-500/5">
-            <div class="text-2xl font-black text-green-500">24г</div>
-            <div class="text-[8px] text-gray-400 font-bold uppercase tracking-widest">Максимальний термін</div>
-        </div>
+    <div class="hidden lg:block reveal" style="transition-delay: 0.2s">
+        <img src="https://images.unsplash.com/photo-1563770660941-10a636076c68?q=80&w=800&auto=format&fit=crop" 
+             class="rounded-[3rem] border border-white/10 shadow-2xl">
     </div>
   </div>
 </section>
 
-<!-- WHY US -->
-<section id="about" class="py-32 px-6 bg-black">
-  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20">
-    <div class="lg:w-1/3 reveal">
-        <h2 class="text-4xl font-black uppercase tracking-tighter leading-none mb-8">Чому ми кращі <br> за магазини?</h2>
+<!-- ADAPTIVE FEATURE: OPTIMIZATION -->
+<section id="optimization" class="py-32 px-6">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center">
+    <div class="reveal">
+        <h2 class="text-4xl font-black mb-8 uppercase tracking-tighter">Чому наші деталі <span class="text-green-500">служать довше?</span></h2>
+        <p class="text-gray-400 mb-10 text-lg leading-relaxed">Ми використовуємо інженерний підхід. Якщо деталь зламалася — значить, в оригіналі була помилка в конструкції або занадто тонкий пластик.</p>
         <div class="space-y-6">
-            <div class="flex items-center gap-5 p-4 glass rounded-2xl border-l-4 border-l-green-500">
-                <div class="text-2xl font-black text-white/20">01</div>
-                <div class="text-sm font-bold uppercase tracking-widest">Ціна в 10 разів нижча за оригінал</div>
+            <div class="flex gap-6 items-start p-6 glass rounded-3xl">
+                <div class="text-green-500 font-black text-2xl">01</div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-tight mb-2">Посилення геометрії</h4>
+                    <p class="text-sm text-gray-500">Додаємо ребра жорсткості та збільшуємо товщину стінок у критичних місцях.</p>
+                </div>
             </div>
-            <div class="flex items-center gap-5 p-4 glass rounded-2xl border-l-4 border-l-green-500">
-                <div class="text-2xl font-black text-white/20">02</div>
-                <div class="text-sm font-bold uppercase tracking-widest">Готовність за добу, а не тижні</div>
-            </div>
-            <div class="flex items-center gap-5 p-4 glass rounded-2xl border-l-4 border-l-green-500">
-                <div class="text-2xl font-black text-white/20">03</div>
-                <div class="text-sm font-bold uppercase tracking-widest">Власний склад інженерних пластиків</div>
-            </div>
-        </div>
-    </div>
-    <div class="lg:w-2/3 reveal" style="transition-delay: 0.3s">
-        <div class="relative rounded-[3rem] overflow-hidden group">
-            <img src="https://images.unsplash.com/photo-1615811361523-6bd03d7748e7?q=80&w=1200&auto=format&fit=crop" class="w-full h-[500px] object-cover scale-110 group-hover:scale-100 transition duration-1000">
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-12">
-                <h4 class="text-3xl font-black mb-4 uppercase">Виробництво повного циклу</h4>
-                <p class="text-gray-300 max-w-lg mb-8">Ми самі моделюємо, самі друкуємо, самі перевіряємо міцність. Жодних посередників.</p>
-                <div class="flex gap-8 border-t border-white/10 pt-8">
-                    <div>
-                        <div class="text-xl font-black text-green-500 tracking-tighter uppercase">Nylon & Carbon</div>
-                        <div class="text-[9px] text-gray-500 font-bold uppercase tracking-widest">Основні матеріали</div>
-                    </div>
-                    <div>
-                        <div class="text-xl font-black text-green-500 tracking-tighter uppercase">Київ, Поділ</div>
-                        <div class="text-[9px] text-gray-500 font-bold uppercase tracking-widest">Локація майстерні</div>
-                    </div>
+            <div class="flex gap-6 items-start p-6 glass rounded-3xl">
+                <div class="text-green-500 font-black text-2xl">02</div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-tight mb-2">Інженерні полімери</h4>
+                    <p class="text-sm text-gray-500">Замість звичайного пластику використовуємо Nylon, Carbon та ABS+ з високою температурною стійкістю.</p>
                 </div>
             </div>
         </div>
     </div>
+    <div class="reveal" style="transition-delay: 0.2s">
+        <div class="bg-gray-900/50 p-1 rounded-[2.5rem] border border-white/5">
+            <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?q=80&w=800&auto=format&fit=crop" class="rounded-[2.4rem] grayscale">
+        </div>
+    </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="py-32 px-6">
+<!-- SERVICES GRID -->
+<section id="services" class="py-32 px-6 bg-black">
   <div class="max-w-7xl mx-auto">
-    <div class="text-center mb-24 reveal">
-        <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-6">Відновлюємо <span class="text-green-500">все</span></h2>
-        <p class="text-gray-500 max-w-xl mx-auto">Від побутової техніки до промислових верстатів та автомобілів.</p>
-    </div>
-
+    <h2 class="text-3xl font-black text-center mb-20 uppercase tracking-widest text-white/20">Наші напрямки</h2>
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="glass p-12 rounded-[2.5rem] reveal hover:border-green-500/50 transition duration-500" style="transition-delay: 0.1s">
-        <div class="text-xs font-black text-green-500 mb-8 tracking-[0.4em] uppercase">Kitchen & Home</div>
-        <h3 class="text-3xl font-black mb-6 uppercase tracking-tight">Побутова техніка</h3>
-        <p class="text-gray-500 text-sm mb-10 leading-relaxed">Шестерні м'ясорубок, блендерів, кавомашин, деталі пилотягів та кухонних комбайнів.</p>
-        <img src="https://images.unsplash.com/photo-1593642532871-8b12e02d091c?q=80&w=400&auto=format&fit=crop" class="rounded-2xl opacity-40 grayscale group-hover:opacity-100 transition h-48 w-full object-cover">
-      </div>
-      <div class="glass p-12 rounded-[2.5rem] reveal hover:border-green-500/50 transition duration-500" style="transition-delay: 0.2s">
-        <div class="text-xs font-black text-green-500 mb-8 tracking-[0.4em] uppercase">Automotive</div>
-        <h3 class="text-3xl font-black mb-6 uppercase tracking-tight">Автозапчастини</h3>
-        <p class="text-gray-500 text-sm mb-10 leading-relaxed">Кліпси, кронштейни, деталі дзеркал, кнопки салону, перехідники для світла та заглушки.</p>
-        <img src="https://images.unsplash.com/photo-1531287333317-18f192b9b17c?q=80&w=400&auto=format&fit=crop" class="rounded-2xl opacity-40 grayscale transition h-48 w-full object-cover">
-      </div>
-      <div class="glass p-12 rounded-[2.5rem] reveal hover:border-green-500/50 transition duration-500" style="transition-delay: 0.3s">
-        <div class="text-xs font-black text-green-500 mb-8 tracking-[0.4em] uppercase">Custom Order</div>
-        <h3 class="text-3xl font-black mb-6 uppercase tracking-tight">Унікальні вузли</h3>
-        <p class="text-gray-500 text-sm mb-10 leading-relaxed">Деталі для промислових верстатів, корпуси приладів та те, чого немає в жодному магазині.</p>
-        <img src="https://images.unsplash.com/photo-1591123720164-de1348028a82?q=80&w=400&auto=format&fit=crop" class="rounded-2xl opacity-40 grayscale transition h-48 w-full object-cover">
-      </div>
+        <div class="glass p-12 rounded-[3rem] reveal">
+            <h3 class="text-xl font-bold mb-4 text-green-400 uppercase tracking-widest">Дім та кухня</h3>
+            <p class="text-sm text-gray-500 mb-8 leading-relaxed">Шестерні блендерів, кавомашин, деталі пилотягів та м'ясорубок.</p>
+            <div class="h-1 w-12 bg-green-500/30"></div>
+        </div>
+        <div class="glass p-12 rounded-[3rem] reveal" style="transition-delay: 0.1s">
+            <h3 class="text-xl font-bold mb-4 text-green-400 uppercase tracking-widest">Авто та Мото</h3>
+            <p class="text-sm text-gray-500 mb-8 leading-relaxed">Кліпси, кронштейни дзеркал, кнопки салону, перехідники для світла.</p>
+            <div class="h-1 w-12 bg-green-500/30"></div>
+        </div>
+        <div class="glass p-12 rounded-[3rem] reveal" style="transition-delay: 0.2s">
+            <h3 class="text-xl font-bold mb-4 text-green-400 uppercase tracking-widest">Промисловість</h3>
+            <p class="text-sm text-gray-500 mb-8 leading-relaxed">Деталі верстатів, корпуси приладів, втулки та нестандартні рішення.</p>
+            <div class="h-1 w-12 bg-green-500/30"></div>
+        </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ (INTERACTIVE ACCORDION) -->
-<section id="faq" class="py-32 px-6 bg-black/50 border-y border-white/5">
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-4xl md:text-6xl font-black mb-20 uppercase tracking-tighter text-center reveal">Питання та <span class="text-green-500">відповіді</span></h2>
-    <div class="space-y-4 reveal">
-        <details class="glass rounded-3xl group" open>
-            <summary class="p-8 font-bold text-lg cursor-pointer flex justify-between items-center list-none uppercase tracking-tight text-green-400">
-                Чи витримає пластикова деталь навантаження?
-                <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </summary>
-            <div class="px-8 pb-8 text-gray-400 text-sm leading-relaxed">
-                Так, ми використовуємо промислові інженерні пластики (Nylon, ABS+, Carbon-filled). Вони розраховані на постійне тертя, високу температуру та механічне навантаження. Ми підбираємо матеріал індивідуально під ваше завдання.
-            </div>
-        </details>
-        <details class="glass rounded-3xl group">
-            <summary class="p-8 font-bold text-lg cursor-pointer flex justify-between items-center list-none uppercase tracking-tight">
-                Як мені надіслати деталь?
-                <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </summary>
-            <div class="px-8 pb-8 text-gray-400 text-sm leading-relaxed text-gray-400">
-                Ви можете надіслати її Новою Поштою або привезти особисто до нашої майстерні в Києві. Навіть якщо деталь розбита — надішліть всі її шматочки, це допоможе нам створити точну модель.
-            </div>
-        </details>
-        <details class="glass rounded-3xl group">
-            <summary class="p-8 font-bold text-lg cursor-pointer flex justify-between items-center list-none uppercase tracking-tight">
-                Яка вартість 3D-моделювання?
-                <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </summary>
-            <div class="px-8 pb-8 text-gray-400 text-sm leading-relaxed text-gray-400">
-                Моделювання простої деталі стартує від 300 грн. Ви платите за це лише один раз — наступні копії деталі коштуватимуть лише як вартість самого друку.
-            </div>
-        </details>
+<!-- B2B BLOCK: FOR BUSINESS -->
+<section id="business" class="py-32 px-6">
+  <div class="max-w-7xl mx-auto glass p-16 md:p-24 rounded-[4rem] border border-green-500/10 flex flex-col lg:flex-row gap-16 items-center overflow-hidden relative">
+    <div class="absolute -top-24 -left-24 w-64 h-64 bg-green-500/5 blur-3xl rounded-full"></div>
+    <div class="lg:w-1/2 reveal">
+        <h2 class="text-4xl font-black mb-8 uppercase tracking-tighter leading-none">Рішення для <br> <span class="text-green-500">Вашого бізнесу</span></h2>
+        <p class="text-gray-400 text-lg mb-10">Співпрацюємо з кав'ярнями, СТО та сервісними центрами. Станьте нашим партнером та отримуйте деталі за спеціальними цінами.</p>
+        <ul class="space-y-4 mb-10">
+            <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-widest text-gray-500">
+                <span class="text-green-500">●</span> Оплата по перерахунку
+            </li>
+            <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-widest text-gray-500">
+                <span class="text-green-500">●</span> Пріоритетний друк (від 12 годин)
+            </li>
+            <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-widest text-gray-500">
+                <span class="text-green-500">●</span> Створення цифрової бібліотеки деталей
+            </li>
+        </ul>
+        <a href="#contact" class="text-green-400 font-black uppercase tracking-widest text-[10px] border-b-2 border-green-500/30 pb-2 hover:border-green-500 transition">Стати партнером</a>
+    </div>
+    <div class="lg:w-1/2 reveal" style="transition-delay: 0.2s">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800&auto=format&fit=crop" class="rounded-3xl opacity-50 grayscale">
     </div>
   </div>
 </section>
 
 <!-- CONTACT FORM -->
 <section id="contact" class="py-32 px-6">
-  <div class="max-w-4xl mx-auto glass p-12 md:p-24 rounded-[3.5rem] border border-white/10 relative overflow-hidden reveal">
-    <div class="absolute -bottom-48 -right-48 w-[600px] h-[600px] bg-green-500/10 blur-[150px] rounded-full"></div>
-    <div class="relative z-10">
-        <h2 class="text-5xl md:text-7xl font-black mb-10 uppercase tracking-tighter text-center leading-[0.9]">Розрахувати <br> <span class="text-green-500">вартість</span></h2>
-        <p class="text-center text-gray-500 mb-16 text-sm font-bold uppercase tracking-[0.3em]">Напишіть нам прямо зараз</p>
-
-        <form class="space-y-6">
-          <div class="grid md:grid-cols-2 gap-6">
-            <input type="text" placeholder="Ваше ім’я"
-              class="w-full p-6 bg-black border border-white/10 rounded-2xl focus:border-green-500 outline-none transition text-white">
-            <input type="tel" placeholder="Номер телефону"
-              class="w-full p-6 bg-black border border-white/10 rounded-2xl focus:border-green-500 outline-none transition text-white">
-          </div>
-          <textarea placeholder="Опишіть вашу проблему (або просто залиште контакти, і ми напишемо вам самі)"
-            class="w-full p-6 bg-black border border-white/10 rounded-2xl h-44 focus:border-green-500 outline-none transition text-white"></textarea>
-
-          <button type="submit" class="btn-primary w-full p-6 rounded-2xl font-black text-black text-xl uppercase tracking-widest">
-            Отримати прорахунок за 15 хв
-          </button>
-        </form>
-        
-        <div class="mt-16 pt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-10">
-            <div class="flex gap-10 text-[10px] font-black uppercase tracking-widest">
-                <a href="https://t.me/your_telegram" class="text-green-500 hover:text-white transition underline decoration-2">Telegram</a>
-                <a href="#" class="text-green-500 hover:text-white transition underline decoration-2">Viber</a>
-            </div>
-            <div class="text-[10px] text-gray-600 font-bold uppercase tracking-widest text-center md:text-right">
-                InService // м. Київ, Поділ // 09:00 - 19:00
-            </div>
-        </div>
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-4xl font-black mb-16 uppercase tracking-tighter reveal">Замовити <span class="text-green-500">прорахунок</span></h2>
+    
+    <form class="space-y-4 reveal">
+      <input type="text" placeholder="Ваше ім’я"
+        class="w-full p-6 bg-white/5 border border-white/10 rounded-2xl focus:border-green-500 outline-none transition">
+      <input type="tel" placeholder="Номер телефону"
+        class="w-full p-6 bg-white/5 border border-white/10 rounded-2xl focus:border-green-500 outline-none transition">
+      <textarea placeholder="Опишіть, що потрібно відновити (можна просто назву моделі приладу)"
+        class="w-full p-6 bg-white/5 border border-white/10 rounded-2xl h-40 focus:border-green-500 outline-none transition"></textarea>
+      <button type="submit" class="w-full btn-primary p-6 rounded-2xl font-black text-black text-xl uppercase tracking-widest">
+        Надіслати запит
+      </button>
+    </form>
+    
+    <div class="mt-12 text-gray-600 text-[10px] font-bold uppercase tracking-[0.4em] reveal">
+        Або напишіть нам: <a href="https://t.me/your_telegram" class="text-green-500 hover:text-white">Telegram</a> // <a href="#" class="text-green-500 hover:text-white">Viber</a>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="py-16 bg-[#010101] border-t border-white/5">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-        <div class="text-2xl font-black text-green-500 uppercase tracking-tighter mb-4">InService Industrial</div>
-        <p class="text-gray-700 text-[9px] uppercase tracking-[0.5em]">© 2026 InService Kyiv. All rights restored.</p>
-    </div>
+<footer class="py-16 border-t border-white/5 text-center">
+    <p class="text-gray-700 text-[9px] font-black uppercase tracking-[0.5em]">InService © 2026 // Kyiv Engineering Hub</p>
 </footer>
 
 <!-- MESSENGER BUTTON -->
-<div class="messenger-btn" style="position: fixed; bottom: 40px; right: 40px; z-index: 9999; transition: transform 0.3s;">
+<div class="messenger-btn" style="position: fixed; bottom: 30px; right: 30px; z-index: 9999;">
   <a href="https://t.me/your_telegram" target="_blank" 
-     style="background-color: #0088cc; color: white; width: 75px; height: 75px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 15px 50px rgba(0,0,0,0.8); border: 1px solid rgba(255,255,255,0.1);">
+     style="background-color: #0088cc; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
     <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-14h.1a8.38 8.38 0 0 1 3.8.9L22 2l-1.5 5.5Z"></path>
     </svg>
-    <span style="font-size: 8px; font-weight: 900; margin-top: 4px; letter-spacing: 0.1em;">PHOTO →</span>
   </a>
 </div>
 
 <script>
-    // Reveal on scroll
     function reveal() {
         var reveals = document.querySelectorAll(".reveal");
         for (var i = 0; i < reveals.length; i++) {
             var windowHeight = window.innerHeight;
             var elementTop = reveals[i].getBoundingClientRect().top;
-            var elementVisible = 150;
-            if (elementTop < windowHeight - elementVisible) {
+            if (elementTop < windowHeight - 150) {
                 reveals[i].classList.add("active");
             }
         }
     }
     window.addEventListener("scroll", reveal);
-    reveal(); // Run on load
+    reveal();
 </script>
 
 </body>
