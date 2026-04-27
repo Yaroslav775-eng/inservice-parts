@@ -3,229 +3,209 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InService | Відновлення деталей на 3D-принтері за 24 години</title>
+  <title>InService | Відновлення запчастин на 3D-принтері в Києві</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
     .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
     .messenger-btn:hover { transform: scale(1.1); }
-    .badge { background: linear-gradient(90deg, #10b981, #059669); }
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .faq-item:last-child { border-bottom: none; }
   </style>
 </head>
 
-<body class="bg-gray-950 text-white selection:bg-green-500/30">
+<body class="bg-[#0a0a0a] text-white selection:bg-green-500/30">
 
 <!-- HEADER -->
-<header class="bg-black/80 backdrop-blur-md border-b border-gray-800 sticky top-0 z-50">
+<header class="bg-black/90 backdrop-blur-md border-b border-gray-800 sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="flex items-center gap-2">
-        <span class="w-8 h-8 bg-green-500 rounded flex items-center justify-center text-black font-bold italic">In</span>
-        <h1 class="text-xl font-bold tracking-tight text-white">Service</h1>
+    <div class="flex flex-col">
+        <div class="flex items-center gap-2">
+            <span class="w-8 h-8 bg-green-500 rounded flex items-center justify-center text-black font-bold italic text-lg">In</span>
+            <span class="text-xl font-bold tracking-tight text-white uppercase">Service</span>
+        </div>
+        <span class="text-[10px] text-green-500/70 font-bold uppercase tracking-widest mt-1">м. Київ // Україна</span>
     </div>
-    <div class="hidden md:flex gap-6 text-sm font-medium text-gray-400">
+    <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-gray-500">
         <a href="#services" class="hover:text-green-400 transition">Послуги</a>
-        <a href="#materials" class="hover:text-green-400 transition">Матеріали</a>
-        <a href="#contact" class="hover:text-green-400 transition">Замовити</a>
+        <a href="#faq" class="hover:text-green-400 transition">FAQ</a>
+        <a href="#contact" class="hover:text-green-400 transition">Контакти</a>
     </div>
-    <a href="#contact" class="bg-green-500 px-5 py-2 rounded-full text-black font-bold text-sm hover:bg-green-400 transition shadow-lg shadow-green-500/20">
-      Зв’язатись
-    </a>
+    <div class="flex items-center gap-4">
+        <a href="tel:+380XXXXXXXXX" class="hidden sm:block text-sm font-bold text-gray-400 hover:text-white transition">+380 (XX) XXX-XX-XX</a>
+        <a href="#contact" class="bg-green-500 px-6 py-2.5 rounded-full text-black font-bold text-sm hover:bg-green-400 transition shadow-lg shadow-green-500/20">
+          Замовити розрахунок
+        </a>
+    </div>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="relative py-28 px-6 overflow-hidden">
-  <div class="absolute top-0 right-0 w-1/3 h-full bg-green-500/5 blur-[120px] rounded-full"></div>
+<section class="relative py-32 px-6 overflow-hidden border-b border-white/5">
+  <div class="absolute -top-24 -right-24 w-96 h-96 bg-green-500/10 blur-[150px] rounded-full"></div>
   <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df37?auto=format&fit=crop&q=80&w=1200"
        class="absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none">
 
-  <div class="relative z-10 max-w-7xl mx-auto text-center md:text-left grid lg:grid-cols-2 gap-12 items-center">
+  <div class="relative z-10 max-w-7xl mx-auto text-center md:text-left grid lg:grid-cols-2 gap-16 items-center">
     <div>
-        <span class="inline-block px-3 py-1 rounded bg-green-500/10 text-green-400 text-xs font-bold tracking-widest uppercase mb-6 border border-green-500/20">
-            Промисловий 3D-друк деталей
-        </span>
-        <h2 class="text-5xl md:text-6xl font-extrabold mb-8 leading-tight">
-            Зламалась деталь? <br> <span class="text-green-400">Відновимо за 24 години</span>
+        <div class="flex items-center gap-3 mb-6 justify-center md:justify-start">
+            <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            <span class="text-green-400 text-xs font-bold tracking-[0.3em] uppercase">Працюємо навіть при блекаутах</span>
+        </div>
+        <h2 class="text-5xl md:text-7xl font-black mb-8 leading-[0.95] tracking-tighter uppercase">
+            Ремонт техніки <br> <span class="text-green-400">через 3D-друк</span>
         </h2>
-        <p class="text-gray-400 text-xl mb-10 max-w-xl leading-relaxed">
-            Не витрачайте тижні на очікування запчастин. Виготовляємо шестерні, кріплення та корпуси, які часто міцніші за оригінал.
+        <p class="text-gray-400 text-lg md:text-xl mb-12 max-w-xl leading-relaxed">
+            Зламалася дрібна деталь, а нову чекати місяць? Виготовимо аналог за 24 години. Міцніше за заводський пластик.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <a href="#contact" class="bg-green-500 px-10 py-5 text-lg rounded-2xl text-black font-bold hover:bg-green-400 transition shadow-xl shadow-green-500/30">
-                Безкоштовний прорахунок за фото
+            <a href="#contact" class="bg-green-500 px-10 py-5 text-lg rounded-2xl text-black font-black hover:bg-green-400 transition shadow-2xl shadow-green-500/30 uppercase tracking-tighter">
+                Дізнатися вартість за 15 хв
             </a>
-            <div class="flex items-center gap-3 px-6 py-4 glass rounded-2xl border border-white/5">
-                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                <span class="text-sm font-medium text-gray-300">Приймаємо замовлення 24/7</span>
-            </div>
+            <a href="#faq" class="px-10 py-5 glass rounded-2xl border border-white/10 font-bold hover:bg-white/5 transition uppercase text-sm tracking-widest flex items-center justify-center gap-2">
+                Питання та відповіді
+            </a>
         </div>
     </div>
-    <div class="relative hidden lg:block">
-        <div class="absolute -inset-4 bg-green-500/10 blur-2xl rounded-full"></div>
-        <img src="https://images.unsplash.com/photo-1563770660941-10a636076c68?auto=format&fit=crop&q=80&w=800" 
-             class="relative rounded-3xl border border-white/10 shadow-2xl">
-    </div>
-  </div>
-</section>
-
-<!-- PAIN POINTS / SOLUTION -->
-<section class="py-24 px-6 bg-black/50 border-y border-white/5">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
-    <div class="text-center md:text-left">
-        <h3 class="text-green-400 font-bold mb-4">Знято з виробництва?</h3>
-        <p class="text-gray-500 text-sm leading-relaxed">Якщо виробник більше не випускає деталь — ми єдиний спосіб врятувати вашу техніку.</p>
-    </div>
-    <div class="text-center md:text-left">
-        <h3 class="text-green-400 font-bold mb-4">Дорога доставка?</h3>
-        <p class="text-gray-500 text-sm leading-relaxed">Замість того, щоб платити за доставку з-за кордону, отримайте деталь у своєму місті вже завтра.</p>
-    </div>
-    <div class="text-center md:text-left">
-        <h3 class="text-green-400 font-bold mb-4">Цілий вузол замість запчастини?</h3>
-        <p class="text-gray-500 text-sm leading-relaxed">Навіщо купувати весь редуктор, якщо можна просто надрукувати одну зламану шестерню?</p>
-    </div>
-  </div>
-</section>
-
-<!-- MATERIALS & QUALITY -->
-<section id="materials" class="py-32 px-6">
-  <div class="max-w-5xl mx-auto text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-16">Чому наші деталі працюють роками?</h2>
-    <div class="grid md:grid-cols-2 gap-8">
-        <div class="glass p-8 rounded-3xl text-left border-l-4 border-l-green-500">
-            <h4 class="text-xl font-bold mb-4">Міцність та Термостійкість</h4>
-            <p class="text-gray-500 mb-6 italic">«Ми використовуємо Nylon та ABS з армуванням. Це пластики, які витримують температуру до 110°C та сильне механічне тертя.»</p>
-            <div class="flex gap-2">
-                <span class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400">NYLON</span>
-                <span class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400">PETG</span>
-                <span class="px-2 py-1 bg-white/5 rounded text-[10px] text-gray-400">ABS+</span>
-            </div>
-        </div>
-        <div class="glass p-8 rounded-3xl text-left border-l-4 border-l-green-500">
-            <h4 class="text-xl font-bold mb-4">Гарантія результату</h4>
-            <p class="text-gray-500 mb-6 italic">«Якщо деталь не підійшла або зламалася протягом 30 днів — ми безкоштовно внесемо правки та надрукуємо нову.»</p>
-            <div class="flex items-center gap-2 text-green-400 font-bold">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"></path></svg>
-                <span>30 Днів Гарантії</span>
-            </div>
+    <div class="relative">
+        <div class="absolute -inset-10 bg-green-500/5 blur-3xl rounded-full"></div>
+        <div class="glass p-4 rounded-[2.5rem] border border-white/5">
+            <img src="https://images.unsplash.com/photo-1563770660941-10a636076c68?auto=format&fit=crop&q=80&w=800" 
+                 class="rounded-[2rem] grayscale hover:grayscale-0 transition duration-1000 shadow-2xl">
         </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES GRID -->
-<section id="services" class="py-20 px-6 bg-gray-900/30">
+<!-- REALISM / PRODUCTION BLOCK -->
+<section class="py-24 px-6 bg-black/40">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+    <div class="order-2 md:order-1 grid grid-cols-2 gap-4">
+        <div class="aspect-square bg-gray-900 rounded-3xl flex items-center justify-center border border-white/5 text-gray-700 text-xs text-center p-6 italic">
+            [Тут буде фото вашого принтера в роботі]
+        </div>
+        <div class="aspect-square bg-gray-900 rounded-3xl flex items-center justify-center border border-white/5 text-gray-700 text-xs text-center p-6 italic transform translate-y-8">
+            [Тут буде фото реальної зламаної шестерні]
+        </div>
+        <div class="aspect-square bg-gray-900 rounded-3xl flex items-center justify-center border border-white/5 text-gray-700 text-xs text-center p-6 italic">
+            [Тут буде фото вашої готової деталі]
+        </div>
+        <div class="aspect-square bg-gray-900 rounded-3xl flex items-center justify-center border border-white/5 text-gray-700 text-xs text-center p-6 italic transform translate-y-8">
+            [Тут буде фото деталі, встановленої в прилад]
+        </div>
+    </div>
+    <div class="order-1 md:order-2">
+        <h2 class="text-3xl md:text-5xl font-bold mb-8 uppercase tracking-tighter">Власна лабораторія в Києві</h2>
+        <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+            Ми не посередники. Всі замовлення виконуються на власному промисловому обладнанні. Ви можете надіслати нам зламану деталь поштою або привезти особисто.
+        </p>
+        <ul class="space-y-4">
+            <li class="flex items-center gap-4 text-green-400">
+                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                <span class="font-bold uppercase text-xs tracking-widest">Контроль якості кожного друку</span>
+            </li>
+            <li class="flex items-center gap-4 text-green-400">
+                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                <span class="font-bold uppercase text-xs tracking-widest">Використання інженерних пластиків</span>
+            </li>
+            <li class="flex items-center gap-4 text-green-400">
+                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                <span class="font-bold uppercase text-xs tracking-widest">Моделювання за залишками деталі</span>
+            </li>
+        </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES SECTION (Already updated, kept as is) -->
+<section id="services" class="py-32 px-6">
   <div class="max-w-7xl mx-auto">
-    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-        <div>
-            <h2 class="text-4xl font-bold mb-4 uppercase tracking-tighter">Наші можливості</h2>
-            <p class="text-gray-500">Приклади того, що ми успішно відновлюємо щодня</p>
-        </div>
-        <div class="text-3xl font-extrabold text-white/10 hidden md:block">01 // SERVICES</div>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- Шестерні -->
-      <div class="group relative bg-black rounded-2xl overflow-hidden border border-gray-800 transition duration-500 hover:border-green-500/30">
-        <img src="https://images.unsplash.com/photo-1593642532871-8b12e02d091c?auto=format&fit=crop&q=80&w=600" class="h-64 w-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
-        <div class="p-8">
-          <h3 class="text-2xl text-green-400 font-bold mb-4 tracking-tight">Шестерні</h3>
-          <p class="text-gray-500 text-sm leading-relaxed mb-6">Для кавомашин Philips/Delonghi, кухонних комбайнів, електроінструменту та промислових редукторів.</p>
-          <a href="#contact" class="inline-flex items-center gap-2 text-xs font-bold text-gray-400 hover:text-green-400 transition">ЗАМОВИТИ ПРОРАХУНОК <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14m-7-7l7 7-7 7"></path></svg></a>
-        </div>
+    <h2 class="text-3xl font-black text-center mb-20 uppercase tracking-widest">Ми виготовляємо</h2>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="glass p-10 rounded-[3rem] group hover:border-green-500/50 transition duration-500">
+        <h3 class="text-2xl font-bold mb-6 text-green-400">Шестерні</h3>
+        <p class="text-gray-500 mb-8 leading-relaxed">Для кухонної техніки, м'ясорубок, блендерів та кавомашин. Матеріал витримує високі навантаження.</p>
+        <img src="https://images.unsplash.com/photo-1593642532871-8b12e02d091c?auto=format&fit=crop&q=80&w=400" class="rounded-2xl opacity-50 group-hover:opacity-100 transition duration-500">
       </div>
-
-      <!-- Кріплення -->
-      <div class="group relative bg-black rounded-2xl overflow-hidden border border-gray-800 transition duration-500 hover:border-green-500/30">
-        <img src="https://images.unsplash.com/photo-1531287333317-18f192b9b17c?auto=format&fit=crop&q=80&w=600" class="h-64 w-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
-        <div class="p-8">
-          <h3 class="text-2xl text-green-400 font-bold mb-4 tracking-tight">Кріплення</h3>
-          <p class="text-gray-500 text-sm leading-relaxed mb-6">ТВ-кронштейни, тримачі дзеркал для авто, кліпси обшивки, корпусні елементи побутової електроніки.</p>
-          <a href="#contact" class="inline-flex items-center gap-2 text-xs font-bold text-gray-400 hover:text-green-400 transition">ЗАМОВИТИ ПРОРАХУНОК <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14m-7-7l7 7-7 7"></path></svg></a>
-        </div>
+      <div class="glass p-10 rounded-[3rem] group hover:border-green-500/50 transition duration-500">
+        <h3 class="text-2xl font-bold mb-6 text-green-400">Кріплення</h3>
+        <p class="text-gray-500 mb-8 leading-relaxed">Автомобільні кліпси, тримачі дзеркал, кріплення для меблів та побутової електроніки.</p>
+        <img src="https://images.unsplash.com/photo-1531287333317-18f192b9b17c?auto=format&fit=crop&q=80&w=400" class="rounded-2xl opacity-50 group-hover:opacity-100 transition duration-500">
       </div>
-
-      <!-- Корпуси -->
-      <div class="group relative bg-black rounded-2xl overflow-hidden border border-gray-800 transition duration-500 hover:border-green-500/30">
-        <img src="https://images.unsplash.com/photo-1591123720164-de1348028a82?auto=format&fit=crop&q=80&w=600" class="h-64 w-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
-        <div class="p-8">
-          <h3 class="text-2xl text-green-400 font-bold mb-4 tracking-tight">Корпуси</h3>
-          <p class="text-gray-500 text-sm leading-relaxed mb-6">Захисні кришки для пультів, корпуси для Arduino/Raspberry, кнопки, декоративні елементи та накладки.</p>
-          <a href="#contact" class="inline-flex items-center gap-2 text-xs font-bold text-gray-400 hover:text-green-400 transition">ЗАМОВИТИ ПРОРАХУНОК <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14m-7-7l7 7-7 7"></path></svg></a>
-        </div>
+      <div class="glass p-10 rounded-[3rem] group hover:border-green-500/50 transition duration-500">
+        <h3 class="text-2xl font-bold mb-6 text-green-400">Корпуси</h3>
+        <p class="text-gray-500 mb-8 leading-relaxed">Кришки акумуляторів, кнопки, декоративні панелі та унікальні корпуси для приладів.</p>
+        <img src="https://images.unsplash.com/photo-1591123720164-de1348028a82?auto=format&fit=crop&q=80&w=400" class="rounded-2xl opacity-50 group-hover:opacity-100 transition duration-500">
       </div>
     </div>
   </div>
 </section>
 
-<!-- COMPARISON SECTION -->
-<section class="py-24 px-6">
-    <div class="max-w-4xl mx-auto glass p-10 md:p-16 rounded-[2rem] border border-white/5">
-        <h2 class="text-3xl font-bold text-center mb-12">Ваша вигода в цифрах</h2>
-        <div class="space-y-6">
-            <div class="flex justify-between items-center pb-4 border-b border-white/5">
-                <span class="text-gray-400">Новий оригінальний вузол:</span>
-                <span class="font-bold text-red-400">4 500+ грн</span>
-            </div>
-            <div class="flex justify-between items-center pb-4 border-b border-white/5">
-                <span class="text-gray-400">Очікування доставки:</span>
-                <span class="font-bold text-red-400">10-14 днів</span>
-            </div>
-            <div class="flex justify-between items-center p-6 bg-green-500/10 rounded-2xl border border-green-500/20">
-                <span class="text-green-400 font-bold">Друк InService:</span>
-                <div class="text-right">
-                    <div class="text-2xl font-black text-green-500">від 300 грн</div>
-                    <div class="text-[10px] text-green-500/70 uppercase font-bold tracking-widest">за 24 години</div>
-                </div>
-            </div>
+<!-- FAQ SECTION -->
+<section id="faq" class="py-32 px-6 bg-black/50">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl md:text-5xl font-black mb-16 uppercase tracking-tighter text-center">Питання та відповіді</h2>
+    <div class="space-y-4">
+        <div class="faq-item p-8 glass rounded-3xl">
+            <h4 class="text-lg font-bold mb-3 text-green-400">Чи буде деталь такою ж міцною, як оригінальна?</h4>
+            <p class="text-gray-500 text-sm leading-relaxed italic text-gray-400">Ми використовуємо інженерні пластики (Nylon, ABS+), які часто мають кращі механічні властивості, ніж заводський дешевий пластик. Ми даємо гарантію на міцність.</p>
+        </div>
+        <div class="faq-item p-8 glass rounded-3xl">
+            <h4 class="text-lg font-bold mb-3 text-green-400">Як мені передати вам деталь для моделювання?</h4>
+            <p class="text-gray-500 text-sm leading-relaxed text-gray-400">Ви можете надіслати її Новою Поштою або привезти до нашої майстерні в Києві. Навіть якщо деталь розлетілася на шматки — ми зможемо зняти розміри та відновити її форму.</p>
+        </div>
+        <div class="faq-item p-8 glass rounded-3xl">
+            <h4 class="text-lg font-bold mb-3 text-green-400">Яка мінімальна вартість замовлення?</h4>
+            <p class="text-gray-500 text-sm leading-relaxed text-gray-400">Мінімальне замовлення на друк готової моделі — від 200 грн. Якщо потрібне моделювання з нуля — від 400 грн залежно від складності.</p>
+        </div>
+        <div class="faq-item p-8 glass rounded-3xl">
+            <h4 class="text-lg font-bold mb-3 text-green-400">Чи безпечний пластик для кавомашин чи продуктів?</h4>
+            <p class="text-gray-500 text-sm leading-relaxed text-gray-400">Так, ми маємо спеціальні харчові пластики (PETG), які витримують високу температуру та сертифіковані для контакту з продуктами харчування.</p>
         </div>
     </div>
+  </div>
 </section>
 
-<!-- CONTACT FORM -->
+<!-- CONTACT SECTION -->
 <section id="contact" class="py-32 px-6">
-  <div class="max-w-3xl mx-auto">
-    <h2 class="text-4xl font-black text-center mb-4 uppercase">Залишити заявку</h2>
-    <p class="text-center text-gray-500 mb-12">Надішліть дані, і ми розрахуємо вартість за 15 хвилин</p>
+  <div class="max-w-4xl mx-auto glass p-12 md:p-20 rounded-[3rem] border border-white/5 relative overflow-hidden">
+    <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-green-500/10 blur-3xl rounded-full"></div>
+    <div class="relative z-10">
+        <h2 class="text-3xl md:text-5xl font-black mb-6 uppercase tracking-tighter text-center">Замовити розрахунок</h2>
+        <p class="text-center text-gray-500 mb-12 text-lg">Зазвичай ми відповідаємо протягом 15 хвилин у робочий час</p>
 
-    <form class="space-y-6">
-      <div class="grid md:grid-cols-2 gap-6">
-        <input type="text" placeholder="Ваше ім’я"
-          class="w-full p-5 bg-black border border-gray-800 rounded-2xl focus:border-green-500 outline-none transition">
-        <input type="tel" placeholder="Номер телефону"
-          class="w-full p-5 bg-black border border-gray-800 rounded-2xl focus:border-green-500 outline-none transition">
-      </div>
+        <form class="space-y-6">
+          <input type="text" placeholder="Ваше ім’я"
+            class="w-full p-6 bg-black/50 border border-gray-800 rounded-2xl focus:border-green-500 outline-none transition text-lg">
+          <input type="tel" placeholder="Номер телефону (з Viber/Telegram)"
+            class="w-full p-6 bg-black/50 border border-gray-800 rounded-2xl focus:border-green-500 outline-none transition text-lg">
+          <textarea placeholder="Що потрібно відновити? (наприклад: шестерня кухонного комбайну Kenwood)"
+            class="w-full p-6 bg-black/50 border border-gray-800 rounded-2xl h-44 focus:border-green-500 outline-none transition text-lg"></textarea>
 
-      <textarea placeholder="Опишіть, яка деталь вам потрібна (наприклад: шестерня для кавомашини Philips)"
-        class="w-full p-5 bg-black border border-gray-800 rounded-2xl h-40 focus:border-green-500 outline-none transition"></textarea>
-
-      <button type="submit" class="w-full bg-green-500 p-5 rounded-2xl font-black text-black text-xl hover:bg-green-400 transition shadow-2xl shadow-green-500/20 uppercase tracking-tighter">
-        Отримати прорахунок
-      </button>
-    </form>
-    <div class="mt-8 text-center text-gray-600 text-sm">
-        Або напишіть нам прямо зараз: 
-        <a href="https://t.me/your_telegram" class="text-green-500 font-bold hover:underline">Telegram</a> / 
-        <a href="#" class="text-green-500 font-bold hover:underline">Viber</a>
+          <button type="submit" class="w-full badge p-6 rounded-2xl font-black text-black text-xl hover:scale-[1.02] transition shadow-2xl uppercase tracking-widest">
+            Дізнатися вартість зараз
+          </button>
+        </form>
+        
+        <div class="mt-12 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-4">
+                <span class="text-gray-500 uppercase text-[10px] font-bold tracking-[0.2em]">Ми в мережі:</span>
+                <a href="https://t.me/your_telegram" class="text-emerald-400 font-bold hover:underline">Telegram</a>
+                <a href="#" class="text-emerald-400 font-bold hover:underline">Viber</a>
+            </div>
+            <div class="text-gray-500 text-xs">
+                InService м. Київ, вул. [Ваша адреса]
+            </div>
+        </div>
     </div>
   </div>
 </section>
-
-<!-- FOOTER -->
-<footer class="py-20 border-t border-white/5 bg-black/50">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
-        <div class="text-center md:text-left">
-            <div class="text-2xl font-black text-green-500 mb-2">InService</div>
-            <p class="text-gray-600 text-sm">Ми повертаємо техніку до життя за допомогою 3D-технологій.</p>
-        </div>
-        <p class="text-gray-700 text-xs uppercase tracking-[0.2em]">InService © 2026. Made with Precision.</p>
-    </div>
-</footer>
 
 <!-- MESSENGER BUTTON -->
-<div class="messenger-btn" style="position: fixed; bottom: 30px; right: 30px; z-index: 9999; transition: transform 0.3s;">
+<div class="messenger-btn shadow-2xl" style="position: fixed; bottom: 30px; right: 30px; z-index: 9999; transition: transform 0.3s;">
   <a href="https://t.me/your_telegram" target="_blank" 
-     style="background-color: #0088cc; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 25px rgba(0,0,0,0.4); border: 2px solid white;">
+     style="background-color: #0088cc; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 3px solid #0a0a0a;">
     <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-14h.1a8.38 8.38 0 0 1 3.8.9L22 2l-1.5 5.5Z"></path>
     </svg>
