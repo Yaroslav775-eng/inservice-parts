@@ -10,8 +10,7 @@
     body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
     .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
     .messenger-btn:hover { transform: scale(1.1); }
-    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.05); }
-    .faq-item:last-child { border-bottom: none; }
+    .badge { background: linear-gradient(90deg, #10b981, #059669); }
   </style>
 </head>
 
@@ -22,7 +21,7 @@
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
     <div class="flex flex-col">
         <div class="flex items-center gap-2">
-            <span class="w-8 h-8 bg-green-500 rounded flex items-center justify-center text-black font-bold italic text-lg">In</span>
+            <div class="w-8 h-8 bg-green-500 rounded flex items-center justify-center text-black font-bold italic text-lg">In</div>
             <span class="text-xl font-bold tracking-tight text-white uppercase">Service</span>
         </div>
         <span class="text-[10px] text-green-500/70 font-bold uppercase tracking-widest mt-1">м. Київ // Україна</span>
@@ -44,7 +43,7 @@
 <!-- HERO -->
 <section class="relative py-32 px-6 overflow-hidden border-b border-white/5">
   <div class="absolute -top-24 -right-24 w-96 h-96 bg-green-500/10 blur-[150px] rounded-full"></div>
-  <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df37?auto=format&fit=crop&q=80&w=1200"
+  <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop"
        class="absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none">
 
   <div class="relative z-10 max-w-7xl mx-auto text-center md:text-left grid lg:grid-cols-2 gap-16 items-center">
@@ -71,7 +70,7 @@
     <div class="relative">
         <div class="absolute -inset-10 bg-green-500/5 blur-3xl rounded-full"></div>
         <div class="glass p-4 rounded-[2.5rem] border border-white/5">
-            <img src="https://images.unsplash.com/photo-1563770660941-10a636076c68?auto=format&fit=crop&q=80&w=800" 
+            <img src="https://images.unsplash.com/photo-1631034307525-467466861f68?q=80&w=800&auto=format&fit=crop" 
                  class="rounded-[2rem] grayscale hover:grayscale-0 transition duration-1000 shadow-2xl">
         </div>
     </div>
@@ -82,18 +81,10 @@
 <section class="py-24 px-6 bg-black/40">
   <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
     <div class="order-2 md:order-1 grid grid-cols-2 gap-4">
-        <div class="aspect-square bg-gray-900 rounded-3xl flex items-center justify-center border border-white/5 text-gray-700 text-xs text-center p-6 italic">
-            [Тут буде фото вашого принтера в роботі]
-        </div>
-        <div class="aspect-square bg-gray-900 rounded-3xl flex items-center justify-center border border-white/5 text-gray-700 text-xs text-center p-6 italic transform translate-y-8">
-            [Тут буде фото реальної зламаної шестерні]
-        </div>
-        <div class="aspect-square bg-gray-900 rounded-3xl flex items-center justify-center border border-white/5 text-gray-700 text-xs text-center p-6 italic">
-            [Тут буде фото вашої готової деталі]
-        </div>
-        <div class="aspect-square bg-gray-900 rounded-3xl flex items-center justify-center border border-white/5 text-gray-700 text-xs text-center p-6 italic transform translate-y-8">
-            [Тут буде фото деталі, встановленої в прилад]
-        </div>
+        <img src="https://images.unsplash.com/photo-1615811361523-6bd03d7748e7?q=80&w=400&auto=format&fit=crop" class="aspect-square object-cover rounded-3xl border border-white/5 grayscale hover:grayscale-0 transition">
+        <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?q=80&w=400&auto=format&fit=crop" class="aspect-square object-cover rounded-3xl border border-white/5 grayscale hover:grayscale-0 transition transform translate-y-8">
+        <img src="https://images.unsplash.com/photo-1593642532871-8b12e02d091c?q=80&w=400&auto=format&fit=crop" class="aspect-square object-cover rounded-3xl border border-white/5 grayscale hover:grayscale-0 transition">
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=400&auto=format&fit=crop" class="aspect-square object-cover rounded-3xl border border-white/5 grayscale hover:grayscale-0 transition transform translate-y-8">
     </div>
     <div class="order-1 md:order-2">
         <h2 class="text-3xl md:text-5xl font-bold mb-8 uppercase tracking-tighter">Власна лабораторія в Києві</h2>
@@ -118,25 +109,25 @@
   </div>
 </section>
 
-<!-- SERVICES SECTION (Already updated, kept as is) -->
+<!-- SERVICES SECTION -->
 <section id="services" class="py-32 px-6">
   <div class="max-w-7xl mx-auto">
-    <h2 class="text-3xl font-black text-center mb-20 uppercase tracking-widest">Ми виготовляємо</h2>
+    <h2 class="text-3xl font-black text-center mb-20 uppercase tracking-widest text-green-400">Ми виготовляємо</h2>
     <div class="grid md:grid-cols-3 gap-10">
       <div class="glass p-10 rounded-[3rem] group hover:border-green-500/50 transition duration-500">
         <h3 class="text-2xl font-bold mb-6 text-green-400">Шестерні</h3>
         <p class="text-gray-500 mb-8 leading-relaxed">Для кухонної техніки, м'ясорубок, блендерів та кавомашин. Матеріал витримує високі навантаження.</p>
-        <img src="https://images.unsplash.com/photo-1593642532871-8b12e02d091c?auto=format&fit=crop&q=80&w=400" class="rounded-2xl opacity-50 group-hover:opacity-100 transition duration-500">
+        <img src="https://images.unsplash.com/photo-1593642532871-8b12e02d091c?q=80&w=400&auto=format&fit=crop" class="rounded-2xl opacity-50 group-hover:opacity-100 transition duration-500 w-full h-48 object-cover">
       </div>
       <div class="glass p-10 rounded-[3rem] group hover:border-green-500/50 transition duration-500">
         <h3 class="text-2xl font-bold mb-6 text-green-400">Кріплення</h3>
         <p class="text-gray-500 mb-8 leading-relaxed">Автомобільні кліпси, тримачі дзеркал, кріплення для меблів та побутової електроніки.</p>
-        <img src="https://images.unsplash.com/photo-1531287333317-18f192b9b17c?auto=format&fit=crop&q=80&w=400" class="rounded-2xl opacity-50 group-hover:opacity-100 transition duration-500">
+        <img src="https://images.unsplash.com/photo-1531287333317-18f192b9b17c?q=80&w=400&auto=format&fit=crop" class="rounded-2xl opacity-50 group-hover:opacity-100 transition duration-500 w-full h-48 object-cover">
       </div>
       <div class="glass p-10 rounded-[3rem] group hover:border-green-500/50 transition duration-500">
         <h3 class="text-2xl font-bold mb-6 text-green-400">Корпуси</h3>
         <p class="text-gray-500 mb-8 leading-relaxed">Кришки акумуляторів, кнопки, декоративні панелі та унікальні корпуси для приладів.</p>
-        <img src="https://images.unsplash.com/photo-1591123720164-de1348028a82?auto=format&fit=crop&q=80&w=400" class="rounded-2xl opacity-50 group-hover:opacity-100 transition duration-500">
+        <img src="https://images.unsplash.com/photo-1591123720164-de1348028a82?q=80&w=400&auto=format&fit=crop" class="rounded-2xl opacity-50 group-hover:opacity-100 transition duration-500 w-full h-48 object-cover">
       </div>
     </div>
   </div>
@@ -149,19 +140,19 @@
     <div class="space-y-4">
         <div class="faq-item p-8 glass rounded-3xl">
             <h4 class="text-lg font-bold mb-3 text-green-400">Чи буде деталь такою ж міцною, як оригінальна?</h4>
-            <p class="text-gray-500 text-sm leading-relaxed italic text-gray-400">Ми використовуємо інженерні пластики (Nylon, ABS+), які часто мають кращі механічні властивості, ніж заводський дешевий пластик. Ми даємо гарантію на міцність.</p>
+            <p class="text-gray-500 text-sm leading-relaxed italic">Ми використовуємо інженерні пластики (Nylon, ABS+), які часто мають кращі механічні властивості, ніж заводський дешевий пластик. Ми даємо гарантію на міцність.</p>
         </div>
         <div class="faq-item p-8 glass rounded-3xl">
             <h4 class="text-lg font-bold mb-3 text-green-400">Як мені передати вам деталь для моделювання?</h4>
-            <p class="text-gray-500 text-sm leading-relaxed text-gray-400">Ви можете надіслати її Новою Поштою або привезти до нашої майстерні в Києві. Навіть якщо деталь розлетілася на шматки — ми зможемо зняти розміри та відновити її форму.</p>
+            <p class="text-gray-500 text-sm leading-relaxed">Ви можете надіслати її Новою Поштою або привезти до нашої майстерні в Києві. Навіть якщо деталь розлетілася на шматки — ми зможемо зняти розміри та відновити її форму.</p>
         </div>
         <div class="faq-item p-8 glass rounded-3xl">
             <h4 class="text-lg font-bold mb-3 text-green-400">Яка мінімальна вартість замовлення?</h4>
-            <p class="text-gray-500 text-sm leading-relaxed text-gray-400">Мінімальне замовлення на друк готової моделі — від 200 грн. Якщо потрібне моделювання з нуля — від 400 грн залежно від складності.</p>
+            <p class="text-gray-500 text-sm leading-relaxed">Мінімальне замовлення на друк готової моделі — від 200 грн. Якщо потрібне моделювання з нуля — від 400 грн залежно від складності.</p>
         </div>
         <div class="faq-item p-8 glass rounded-3xl">
             <h4 class="text-lg font-bold mb-3 text-green-400">Чи безпечний пластик для кавомашин чи продуктів?</h4>
-            <p class="text-gray-500 text-sm leading-relaxed text-gray-400">Так, ми маємо спеціальні харчові пластики (PETG), які витримують високу температуру та сертифіковані для контакту з продуктами харчування.</p>
+            <p class="text-gray-500 text-sm leading-relaxed">Так, ми маємо спеціальні харчові пластики (PETG), які витримують високу температуру та сертифіковані для контакту з продуктами харчування.</p>
         </div>
     </div>
   </div>
@@ -177,22 +168,22 @@
 
         <form class="space-y-6">
           <input type="text" placeholder="Ваше ім’я"
-            class="w-full p-6 bg-black/50 border border-gray-800 rounded-2xl focus:border-green-500 outline-none transition text-lg">
+            class="w-full p-6 bg-black/50 border border-gray-800 rounded-2xl focus:border-green-500 outline-none transition text-lg text-white">
           <input type="tel" placeholder="Номер телефону (з Viber/Telegram)"
-            class="w-full p-6 bg-black/50 border border-gray-800 rounded-2xl focus:border-green-500 outline-none transition text-lg">
+            class="w-full p-6 bg-black/50 border border-gray-800 rounded-2xl focus:border-green-500 outline-none transition text-lg text-white">
           <textarea placeholder="Що потрібно відновити? (наприклад: шестерня кухонного комбайну Kenwood)"
-            class="w-full p-6 bg-black/50 border border-gray-800 rounded-2xl h-44 focus:border-green-500 outline-none transition text-lg"></textarea>
+            class="w-full p-6 bg-black/50 border border-gray-800 rounded-2xl h-44 focus:border-green-500 outline-none transition text-lg text-white"></textarea>
 
-          <button type="submit" class="w-full badge p-6 rounded-2xl font-black text-black text-xl hover:scale-[1.02] transition shadow-2xl uppercase tracking-widest">
+          <button type="submit" class="badge w-full p-6 rounded-2xl font-black text-black text-xl hover:scale-[1.02] transition shadow-2xl uppercase tracking-widest">
             Дізнатися вартість зараз
           </button>
         </form>
         
         <div class="mt-12 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex items-center gap-4">
-                <span class="text-gray-500 uppercase text-[10px] font-bold tracking-[0.2em]">Ми в мережі:</span>
-                <a href="https://t.me/your_telegram" class="text-emerald-400 font-bold hover:underline">Telegram</a>
-                <a href="#" class="text-emerald-400 font-bold hover:underline">Viber</a>
+            <div class="flex items-center gap-4 text-sm font-bold uppercase tracking-widest">
+                <span class="text-gray-500">Ми в мережі:</span>
+                <a href="https://t.me/your_telegram" class="text-green-500 hover:underline">Telegram</a>
+                <a href="#" class="text-green-500 hover:underline">Viber</a>
             </div>
             <div class="text-gray-500 text-xs">
                 InService м. Київ, вул. [Ваша адреса]
