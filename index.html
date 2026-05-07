@@ -1016,6 +1016,7 @@
     });
 
     // --- Advanced Analytics & Audiences ---
+    console.log("GA4 Debug: Tracking scripts loaded.");
 
     // 1. Scroll Depth Tracking
     let scrollDepths = [25, 50, 75, 90];
@@ -1029,6 +1030,7 @@
         scrollDepths.forEach(depth => {
             if (scrollPercent >= depth && !sentDepths.includes(depth)) {
                 sentDepths.push(depth);
+                console.log(`GA4 Event: scroll_depth (${depth}%)`);
                 gtag('event', 'scroll_depth', {
                     'percent': depth,
                     'page_location': window.location.href
@@ -1040,6 +1042,7 @@
     // 2. Engagement Timers
     [30, 60, 120].forEach(seconds => {
         setTimeout(() => {
+            console.log(`GA4 Event: engagement_time (${seconds}s)`);
             gtag('event', 'engagement_time', {
                 'seconds': seconds,
                 'page_location': window.location.href
@@ -1055,25 +1058,30 @@
         const href = link.getAttribute('href') || '';
         
         if (href.startsWith('tel:')) {
+            console.log("GA4 Event: contact_phone_click");
             gtag('event', 'contact_phone_click', { 'event_category': 'contact', 'value': href });
             gtag('event', 'click_to_call');
         } else if (href.includes('viber://')) {
+            console.log("GA4 Event: contact_viber_click");
             gtag('event', 'contact_viber_click', { 'event_category': 'contact' });
             gtag('event', 'click_to_chat', { 'platform': 'viber' });
         } else if (href.includes('t.me/')) {
+            console.log("GA4 Event: contact_telegram_click");
             gtag('event', 'contact_telegram_click', { 'event_category': 'contact' });
             gtag('event', 'click_to_chat', { 'platform': 'telegram' });
         }
     });
 
     document.querySelectorAll('form').forEach(form => {
-        form.addEventListener('submit', function() {
+        form.addEventListener('submit', function(e) {
             const formData = new FormData(this);
             const phone = formData.get('phone');
             const name = formData.get('name') || 'Anonymous';
             const subject = this.querySelector('input[name="_subject"]')?.value || 'General Form';
 
-            // Send event to GA4 with potential User Data (Enhanced Conversions ready)
+            console.log("GA4 Event: generate_lead (sending...)");
+            
+            // Send event to GA4
             gtag('event', 'generate_lead', {
                 'event_label': subject,
                 'form_name': subject,
