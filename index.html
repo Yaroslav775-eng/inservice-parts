@@ -1015,7 +1015,39 @@
         setTimeout(openModal, 10000); 
     });
 
-    // Tracking clicks on contact links (Phone, Viber, Telegram)
+    // --- Advanced Analytics & Audiences ---
+
+    // 1. Scroll Depth Tracking
+    let scrollDepths = [25, 50, 75, 90];
+    let sentDepths = [];
+    window.addEventListener('scroll', () => {
+        let s = window.scrollY,
+            d = document.documentElement.scrollHeight,
+            c = window.innerHeight;
+        let scrollPercent = (s / (d - c)) * 100;
+
+        scrollDepths.forEach(depth => {
+            if (scrollPercent >= depth && !sentDepths.includes(depth)) {
+                sentDepths.push(depth);
+                gtag('event', 'scroll_depth', {
+                    'percent': depth,
+                    'page_location': window.location.href
+                });
+            }
+        });
+    });
+
+    // 2. Engagement Timers
+    [30, 60, 120].forEach(seconds => {
+        setTimeout(() => {
+            gtag('event', 'engagement_time', {
+                'seconds': seconds,
+                'page_location': window.location.href
+            });
+        }, seconds * 1000);
+    });
+
+    // 3. Contact & Form Tracking
     document.addEventListener('click', function(e) {
         const link = e.target.closest('a');
         if (!link) return;
@@ -1024,7 +1056,7 @@
         
         if (href.startsWith('tel:')) {
             gtag('event', 'contact_phone_click', { 'event_category': 'contact', 'value': href });
-            gtag('event', 'click_to_call'); // Additional conversion event
+            gtag('event', 'click_to_call');
         } else if (href.includes('viber://')) {
             gtag('event', 'contact_viber_click', { 'event_category': 'contact' });
             gtag('event', 'click_to_chat', { 'platform': 'viber' });
@@ -1034,17 +1066,22 @@
         }
     });
 
-    // Tracking form submissions
     document.querySelectorAll('form').forEach(form => {
         form.addEventListener('submit', function() {
+            const formData = new FormData(this);
+            const phone = formData.get('phone');
+            const name = formData.get('name') || 'Anonymous';
             const subject = this.querySelector('input[name="_subject"]')?.value || 'General Form';
-            // Primary conversion event
+
+            // Send event to GA4 with potential User Data (Enhanced Conversions ready)
             gtag('event', 'generate_lead', {
-                'event_category': 'engagement',
                 'event_label': subject,
-                'send_to': 'G-7WE400WES7'
+                'form_name': subject,
+                'user_data': {
+                    'phone_number': phone,
+                    'address': { 'first_name': name }
+                }
             });
-            // Legacy event name for safety
             gtag('event', 'form_submission', { 'event_label': subject });
         });
     });
