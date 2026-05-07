@@ -14,7 +14,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-7WE400WES7');
+    gtag('config', 'G-7WE400WES7', { 'debug_mode': true, 'transport_type': 'beacon' });
   </script>
   <style>
     body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; color: #f3f4f6; background: #020202; }
@@ -1013,11 +1013,14 @@
         const href = link.getAttribute('href') || '';
         
         if (href.startsWith('tel:')) {
-            gtag('event', 'contact_phone_click', { 'phone_number': href });
+            gtag('event', 'contact_phone_click', { 'event_category': 'contact', 'value': href });
+            gtag('event', 'click_to_call'); // Additional conversion event
         } else if (href.includes('viber://')) {
-            gtag('event', 'contact_viber_click');
+            gtag('event', 'contact_viber_click', { 'event_category': 'contact' });
+            gtag('event', 'click_to_chat', { 'platform': 'viber' });
         } else if (href.includes('t.me/')) {
-            gtag('event', 'contact_telegram_click');
+            gtag('event', 'contact_telegram_click', { 'event_category': 'contact' });
+            gtag('event', 'click_to_chat', { 'platform': 'telegram' });
         }
     });
 
@@ -1025,12 +1028,14 @@
     document.querySelectorAll('form').forEach(form => {
         form.addEventListener('submit', function() {
             const subject = this.querySelector('input[name="_subject"]')?.value || 'General Form';
-            gtag('event', 'form_submission', {
+            // Primary conversion event
+            gtag('event', 'generate_lead', {
                 'event_category': 'engagement',
-                'event_label': subject
+                'event_label': subject,
+                'send_to': 'G-7WE400WES7'
             });
-            // Also track as a generic 'lead' event for GA4
-            gtag('event', 'generate_lead', { 'event_label': subject });
+            // Legacy event name for safety
+            gtag('event', 'form_submission', { 'event_label': subject });
         });
     });
 </script>
