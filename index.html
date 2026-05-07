@@ -7,6 +7,15 @@
   <link rel="icon" type="image/png" href="./img/inservice_dark_logo.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WE400WES7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7WE400WES7');
+  </script>
   <style>
     body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; color: #f3f4f6; background: #020202; }
     .glass { background: rgba(255, 255, 255, 0.01); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); }
@@ -964,6 +973,8 @@
         modal.classList.remove('hidden');
         // Small delay to trigger transition
         setTimeout(() => modal.classList.add('active'), 10);
+        // GA4 Event: Modal Opened
+        gtag('event', 'modal_opened', { 'event_category': 'interaction' });
     }
     function closeModal() {
         const modal = document.getElementById('orderModal');
@@ -992,6 +1003,35 @@
     // AUTO-PUSH TRIGGER (After 10 seconds)
     window.addEventListener('load', () => {
         setTimeout(openModal, 10000); 
+    });
+
+    // Tracking clicks on contact links (Phone, Viber, Telegram)
+    document.addEventListener('click', function(e) {
+        const link = e.target.closest('a');
+        if (!link) return;
+
+        const href = link.getAttribute('href') || '';
+        
+        if (href.startsWith('tel:')) {
+            gtag('event', 'contact_phone_click', { 'phone_number': href });
+        } else if (href.includes('viber://')) {
+            gtag('event', 'contact_viber_click');
+        } else if (href.includes('t.me/')) {
+            gtag('event', 'contact_telegram_click');
+        }
+    });
+
+    // Tracking form submissions
+    document.querySelectorAll('form').forEach(form => {
+        form.addEventListener('submit', function() {
+            const subject = this.querySelector('input[name="_subject"]')?.value || 'General Form';
+            gtag('event', 'form_submission', {
+                'event_category': 'engagement',
+                'event_label': subject
+            });
+            // Also track as a generic 'lead' event for GA4
+            gtag('event', 'generate_lead', { 'event_label': subject });
+        });
     });
 </script>
 </body>
