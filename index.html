@@ -4,9 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3D-друк зламаних деталей у Харкові | Відновлення запчастин за 24 години</title>
+  <meta name="description" content="Професійний 3D-друк деталей у Харкові. Відновлення зламаних запчастин, шестерень та корпусів за 24 години. Реверс-інжиніринг, 3D-сканування та виготовлення деталей з інженерних пластиків.">
+  <link rel="canonical" href="https://yaroslav775-eng.github.io/inservice-parts/">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yaroslav775-eng.github.io/inservice-parts/">
+  <meta property="og:title" content="3D-друк зламаних деталей у Харкові | InService">
+  <meta property="og:description" content="Відновлення запчастин та промисловий 3D-друк за 24 години. Гарантія 6 місяців.">
+  <meta property="og:image" content="https://yaroslav775-eng.github.io/inservice-parts/img/hero_macro.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://yaroslav775-eng.github.io/inservice-parts/">
+  <meta property="twitter:title" content="3D-друк зламаних деталей у Харкові | InService">
+  <meta property="twitter:description" content="Відновлення запчастин та промисловий 3D-друк за 24 години. Гарантія 6 місяців.">
+  <meta property="twitter:image" content="https://yaroslav775-eng.github.io/inservice-parts/img/hero_macro.png">
+
   <link rel="icon" type="image/png" href="./img/inservice_dark_logo.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "InService Kharkiv",
+    "image": "https://yaroslav775-eng.github.io/inservice-parts/img/inservice_dark_logo.png",
+    "@id": "https://yaroslav775-eng.github.io/inservice-parts/",
+    "url": "https://yaroslav775-eng.github.io/inservice-parts/",
+    "telephone": "+380676526004",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "проспект Науки 17",
+      "addressLocality": "Харків",
+      "postalCode": "61000",
+      "addressCountry": "UA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 50.0057,
+      "longitude": 36.2292
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "19:00"
+    }
+  }
+  </script>
   
   <!-- Google Analytics (GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WE400WES7"></script>
@@ -14,7 +70,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-7WE400WES7', { 'debug_mode': true, 'transport_type': 'beacon' });
+    gtag('config', 'G-7WE400WES7', { 'transport_type': 'beacon' });
   </script>
   <style>
     body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; color: #f3f4f6; background: #020202; }
@@ -67,7 +123,7 @@
             
             <form action="https://formsubmit.co/kiev.inservice@gmail.com" method="POST" class="space-y-4">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://yaroslav775-eng.github.io/inservice-parts/">
+                <input type="hidden" name="_next" value="https://yaroslav775-eng.github.io/inservice-parts/thanks.html">
                 
                 <div class="bg-white/5 border border-white/10 rounded-2xl px-6 py-5 flex items-center gap-3">
                     <span class="text-xs">🇺🇦</span>
@@ -109,7 +165,8 @@
         <div class="flex items-center">
             <a href="#" class="flex items-center gap-3 group">
                 <div class="relative w-10 h-10 flex items-center justify-center">
-                    <svg viewBox="0 0 100 100" class="w-full h-full fill-green-500 transition-transform duration-500 group-hover:rotate-90">
+                    <svg viewBox="0 0 100 100" class="w-full h-full fill-green-500 transition-transform duration-500 group-hover:rotate-90" role="img" aria-labelledby="headerLogoTitle">
+                        <title id="headerLogoTitle">Логотип InService - 3D друк у Харкові</title>
                         <path d="M50 5 L90 25 L90 75 L50 95 L10 75 L10 25 Z" fill="none" stroke="currentColor" stroke-width="8" class="stroke-green-500"></path>
                         <circle cx="50" cy="50" r="15" class="fill-green-500"></circle>
                         <path d="M50 5 L50 35 M90 25 L65 40 M90 75 L65 60 M50 95 L50 65 M10 75 L35 60 M10 25 L35 40" stroke="currentColor" stroke-width="4" class="stroke-green-500/50"></path>
@@ -126,12 +183,13 @@
             <a href="#gallery" class="hover:text-green-500 transition">Портфоліо</a>
             <a href="#services" class="hover:text-green-500 transition">Послуги</a>
             <a href="#materials" class="hover:text-green-500 transition">Матеріали</a>
+            <a href="#faq" class="hover:text-green-500 transition">FAQ</a>
             <a href="#contact" class="hover:text-green-500 transition">Контакти</a>
         </nav>
 
         <div class="flex items-center gap-6">
             <div class="hidden md:flex flex-col items-end">
-            <a href="https://t.me/Yaroslav775" class="text-gray-400 hover:text-[#0088cc] transition">
+            <a href="https://t.me/inservice17" class="text-gray-400 hover:text-[#0088cc] transition">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
             </a>
             <a href="viber://chat?number=%2B380676526004" class="text-gray-400 hover:text-[#7360f2] transition">
@@ -148,6 +206,8 @@
     </div>
   </div>
 </header>
+
+<main>
 
 <!-- HERO -->
 <section class="relative min-h-[90vh] flex items-center px-6 overflow-hidden">
@@ -170,7 +230,7 @@
         
         <!-- TRIPLET BUTTONS -->
         <div class="flex flex-wrap gap-4 mb-10">
-            <a href="https://t.me/Yaroslav775" class="bg-[#0088cc] px-6 py-4 rounded-xl text-white font-black text-[10px] uppercase tracking-widest hover:scale-105 transition flex items-center gap-2">
+            <a href="https://t.me/inservice17" class="bg-[#0088cc] px-6 py-4 rounded-xl text-white font-black text-[10px] uppercase tracking-widest hover:scale-105 transition flex items-center gap-2">
                 Telegram
             </a>
             <a href="viber://chat?number=%2B380676526004" class="bg-[#7360f2] px-6 py-4 rounded-xl text-white font-black text-[10px] uppercase tracking-widest hover:scale-105 transition flex items-center gap-2">
@@ -189,7 +249,7 @@
     </div>
     <div class="relative hidden lg:block reveal active" style="transition-delay: 0.2s">
         <div class="glass p-12 rounded-[4rem] border border-white/5 relative">
-            <img src="./img/hero_macro.png" class="rounded-[2.5rem] transition duration-1000 shadow-2xl w-full h-full object-cover">
+            <img src="./img/hero_macro.png" alt="Процес 3D-друку інженерної деталі" class="rounded-[2.5rem] transition duration-1000 shadow-2xl w-full h-full object-cover">
             <div class="absolute -bottom-10 -left-10 glass p-8 rounded-3xl border border-green-500/20 bg-green-900/10">
                 <div class="text-4xl font-black text-green-500 mb-2 tracking-tighter uppercase">24 години</div>
                 <div class="text-[9px] text-gray-400 font-bold uppercase tracking-widest leading-tight">Швидке виготовлення <br> запчастин</div>
@@ -552,7 +612,7 @@
             <div class="bg-black p-8 rounded-2xl flex items-center gap-4">
                 <div class="text-green-500 text-2xl">🛡️</div>
                 <div>
-                    <div class="text-white font-bold uppercase text-[10px] tracking-widest">Гарантія 1 рік</div>
+                    <div class="text-white font-bold uppercase text-[10px] tracking-widest">Гарантія 6 місяців</div>
                     <div class="text-gray-500 text-[9px]">Повна техпідтримка</div>
                 </div>
             </div>
@@ -618,7 +678,7 @@
             <!-- Item 1: Real Case -->
             <div class="glass rounded-3xl border border-white/5 overflow-hidden group hover:border-green-500/30 transition-all duration-500">
                 <div class="relative aspect-[4/3] overflow-hidden">
-                    <img src="./img/case_gear_fixed.png" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-700">
+                    <img src="./img/case_gear_fixed.png" alt="Відновлена пластикова шестерня для кавомашини Philips" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-700">
                     <div class="absolute top-4 right-4 bg-green-500 text-black text-[8px] font-black uppercase px-3 py-1 rounded-full shadow-lg">Було / Стало</div>
                 </div>
                 <div class="p-8">
@@ -652,7 +712,7 @@
             <!-- Item 2: Real Process -->
             <div class="glass rounded-3xl border border-white/5 overflow-hidden group hover:border-green-500/30 transition-all duration-500">
                 <div class="relative aspect-[4/3] overflow-hidden">
-                    <img src="./img/workshop_real.png" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-700">
+                    <img src="./img/workshop_real.png" alt="Серійне виробництво корпусів на 3D-принтерах" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-700">
                     <div class="absolute top-4 right-4 bg-white/10 backdrop-blur-md text-white text-[8px] font-black uppercase px-3 py-1 rounded-full border border-white/20">Майстерня</div>
                 </div>
                 <div class="p-8">
@@ -686,7 +746,7 @@
             <!-- Item 3 -->
             <div class="glass rounded-3xl border border-white/5 overflow-hidden group hover:border-green-500/30 transition-all duration-500">
                 <div class="relative aspect-[4/3] overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800" class="w-full h-full object-cover opacity-40 group-hover:opacity-100 group-hover:scale-105 transition duration-700 grayscale group-hover:grayscale-0">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800" alt="3D-друк кріплення автомобільної фари BMW" class="w-full h-full object-cover opacity-40 group-hover:opacity-100 group-hover:scale-105 transition duration-700 grayscale group-hover:grayscale-0">
                     <div class="absolute top-4 right-4 bg-green-500/20 text-green-500 text-[8px] font-black uppercase px-3 py-1 rounded-full border border-green-500/30">Auto Case</div>
                 </div>
                 <div class="p-8">
@@ -718,7 +778,7 @@
             </div>
             <!-- Item 4 -->
             <div class="relative aspect-[4/3] group overflow-hidden bg-gray-900 border border-white/5">
-                <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?q=80&w=800" class="w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition duration-700 grayscale group-hover:grayscale-0">
+                <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?q=80&w=800" alt="Промисловий 3D-друк деталей для машинобудування" class="w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition duration-700 grayscale group-hover:grayscale-0">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
                 <div class="absolute bottom-8 left-8 right-8">
                     <h4 class="text-white font-bold uppercase text-[11px] tracking-widest leading-relaxed">Машинобудування <br> (B2B рішення)</h4>
@@ -726,7 +786,7 @@
             </div>
             <!-- Item 5 -->
             <div class="relative aspect-[4/3] group overflow-hidden bg-gray-900 border border-white/5">
-                <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=800" class="w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition duration-700 grayscale group-hover:grayscale-0">
+                <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=800" alt="Медичні прототипи виготовлені за допомогою 3D-сканування" class="w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition duration-700 grayscale group-hover:grayscale-0">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
                 <div class="absolute bottom-8 left-8 right-8">
                     <h4 class="text-white font-bold uppercase text-[11px] tracking-widest leading-relaxed">Медична <br> промисловість</h4>
@@ -734,7 +794,7 @@
             </div>
             <!-- Item 6 -->
             <div class="relative aspect-[4/3] group overflow-hidden bg-gray-900 border border-white/5">
-                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800" class="w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition duration-700 grayscale group-hover:grayscale-0">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800" alt="Відновлення деталей побутової техніки методом 3D-друку" class="w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition duration-700 grayscale group-hover:grayscale-0">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
                 <div class="absolute bottom-8 left-8 right-8">
                     <h4 class="text-white font-bold uppercase text-[11px] tracking-widest leading-relaxed">Побутова техніка <br> (ремонт)</h4>
@@ -749,7 +809,7 @@
     <div class="max-w-4xl mx-auto text-center reveal">
         <h2 class="text-3xl font-black mb-10 uppercase">Маєте зламану деталь? Зв'яжіться з нами:</h2>
         <div class="flex justify-center gap-6 flex-wrap">
-            <a href="https://t.me/Yaroslav775" class="bg-[#0088cc] px-8 py-5 rounded-2xl text-white font-black text-xs uppercase tracking-widest hover:scale-105 transition flex items-center gap-2">Telegram</a>
+            <a href="https://t.me/inservice17" class="bg-[#0088cc] px-8 py-5 rounded-2xl text-white font-black text-xs uppercase tracking-widest hover:scale-105 transition flex items-center gap-2">Telegram</a>
             <a href="viber://chat?number=%2B380676526004" class="bg-[#7360f2] px-8 py-5 rounded-2xl text-white font-black text-xs uppercase tracking-widest hover:scale-105 transition flex items-center gap-2">Viber</a>
             <a href="tel:+380676526004" class="bg-white px-8 py-5 rounded-2xl text-black font-black text-xs uppercase tracking-widest hover:scale-105 transition flex items-center gap-2">Дзвінок</a>
         </div>
@@ -795,6 +855,68 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section id="faq" class="py-32 px-6 bg-[#030303] border-t border-white/5">
+    <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-20 reveal">
+            <p class="text-green-500 font-bold uppercase text-[10px] tracking-[0.4em] mb-4">Часті питання</p>
+            <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-tight text-white">Відповіді на <span class="text-green-500">ваші питання</span></h2>
+        </div>
+        <div class="space-y-4 reveal">
+            <!-- FAQ 1 -->
+            <details class="glass rounded-2xl border border-white/5 group" open>
+                <summary class="p-8 cursor-pointer flex items-center justify-between text-white font-bold uppercase text-sm tracking-tight hover:text-green-500 transition">
+                    Скільки коштує 3D-друк деталі?
+                    <svg class="w-5 h-5 text-green-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </summary>
+                <div class="px-8 pb-8 text-gray-400 text-sm leading-relaxed">
+                    Ціна залежить від розміру, складності та матеріалу деталі. <strong class="text-white">Мінімальна вартість — від 200 грн.</strong> Надішліть фото деталі у Telegram або Viber, і ми розрахуємо точну вартість протягом 15 хвилин.
+                </div>
+            </details>
+            <!-- FAQ 2 -->
+            <details class="glass rounded-2xl border border-white/5 group">
+                <summary class="p-8 cursor-pointer flex items-center justify-between text-white font-bold uppercase text-sm tracking-tight hover:text-green-500 transition">
+                    Як швидко ви виготовите деталь?
+                    <svg class="w-5 h-5 text-green-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </summary>
+                <div class="px-8 pb-8 text-gray-400 text-sm leading-relaxed">
+                    Стандартний термін — <strong class="text-white">24 години</strong> для простих деталей. Складні проекти або серійні партії — від 2 до 5 днів. Є можливість терміново — за додаткову оплату.
+                </div>
+            </details>
+            <!-- FAQ 3 -->
+            <details class="glass rounded-2xl border border-white/5 group">
+                <summary class="p-8 cursor-pointer flex items-center justify-between text-white font-bold uppercase text-sm tracking-tight hover:text-green-500 transition">
+                    Чи буде деталь така ж міцна, як оригінал?
+                    <svg class="w-5 h-5 text-green-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </summary>
+                <div class="px-8 pb-8 text-gray-400 text-sm leading-relaxed">
+                    Так, а часто навіть міцніша. Ми використовуємо <strong class="text-white">інженерні пластики: Nylon, Carbon Fiber, PETG, ABS+</strong>, які за характеристиками перевищують заводський матеріал. Гарантія на зносостійкість — 6 місяців.
+                </div>
+            </details>
+            <!-- FAQ 4 -->
+            <details class="glass rounded-2xl border border-white/5 group">
+                <summary class="p-8 cursor-pointer flex items-center justify-between text-white font-bold uppercase text-sm tracking-tight hover:text-green-500 transition">
+                    Чи потрібні мені креслення або 3D-модель?
+                    <svg class="w-5 h-5 text-green-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </summary>
+                <div class="px-8 pb-8 text-gray-400 text-sm leading-relaxed">
+                    <strong class="text-white">Ні, не обов'язково.</strong> Достатньо фото або самого зразка деталі (навіть зламаного). Наші інженери проведуть реверс-інжиніринг та створять 3D-модель з нуля.
+                </div>
+            </details>
+            <!-- FAQ 5 -->
+            <details class="glass rounded-2xl border border-white/5 group">
+                <summary class="p-8 cursor-pointer flex items-center justify-between text-white font-bold uppercase text-sm tracking-tight hover:text-green-500 transition">
+                    Чи відправляєте ви по Україні?
+                    <svg class="w-5 h-5 text-green-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </summary>
+                <div class="px-8 pb-8 text-gray-400 text-sm leading-relaxed">
+                    <strong class="text-white">Так!</strong> Відправляємо Новою Поштою по всій Україні. У Харкові можна забрати самовивозом з нашої майстерні на проспекті Науки 17.
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
 <!-- CONTACT FORM -->
 <section id="contact" class="py-32 px-6">
   <div class="max-w-4xl mx-auto glass p-16 md:p-24 rounded-[4rem] border border-white/10 relative overflow-hidden reveal">
@@ -803,14 +925,14 @@
         <h2 class="text-5xl md:text-7xl font-black mb-10 uppercase tracking-tighter text-center leading-[0.9]">Дізнатись <br> <span class="text-green-500">вартість</span></h2>
         
         <div class="flex justify-center gap-6 flex-wrap mb-12">
-            <a href="https://t.me/Yaroslav775" class="bg-[#0088cc] px-6 py-4 rounded-xl text-white font-black text-[10px] uppercase tracking-widest hover:scale-105 transition">Telegram</a>
+            <a href="https://t.me/inservice17" class="bg-[#0088cc] px-6 py-4 rounded-xl text-white font-black text-[10px] uppercase tracking-widest hover:scale-105 transition">Telegram</a>
             <a href="viber://chat?number=%2B380676526004" class="bg-[#7360f2] px-6 py-4 rounded-xl text-white font-black text-[10px] uppercase tracking-widest hover:scale-105 transition">Viber</a>
             <a href="tel:+380676526004" class="bg-white px-6 py-4 rounded-xl text-black font-black text-[10px] uppercase tracking-widest hover:scale-105 transition">Call</a>
         </div>
 
         <form action="https://formsubmit.co/kiev.inservice@gmail.com" method="POST" class="space-y-6">
           <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://yaroslav775-eng.github.io/inservice-parts/">
+          <input type="hidden" name="_next" value="https://yaroslav775-eng.github.io/inservice-parts/thanks.html">
           
           <div class="grid md:grid-cols-2 gap-6">
             <input type="text" name="name" required placeholder="Ваше ім’я" class="w-full p-6 bg-black border border-white/5 rounded-2xl focus:border-green-500 outline-none transition text-white">
@@ -825,13 +947,7 @@
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="py-16 bg-[#010101] border-t border-white/5">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-        <div class="text-2xl font-black text-green-500 uppercase tracking-tighter mb-4 italic">InService Kharkiv</div>
-        <p class="text-gray-700 text-[9px] uppercase tracking-[0.5em]">© 2026 InService Engineering Lab. 3D-друк деталей та виготовлення запчастин у Харкові.</p>
-    </div>
-</footer>
+
 
 <script>
     function reveal() {
@@ -865,7 +981,7 @@
                     
                     <form action="https://formsubmit.co/kiev.inservice@gmail.com" method="POST" class="flex flex-col sm:flex-row gap-4">
                         <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="https://yaroslav775-eng.github.io/inservice-parts/">
+                        <input type="hidden" name="_next" value="https://yaroslav775-eng.github.io/inservice-parts/thanks.html">
                         
                         <div class="flex-1 bg-white/5 border border-white/10 rounded-xl px-6 py-4 flex items-center gap-3">
                             <span class="text-xs">🇺🇦</span>
@@ -919,6 +1035,8 @@
     </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
 <footer class="py-24 px-6 border-t border-white/5 bg-[#010101]">
     <div class="max-w-7xl mx-auto">
@@ -926,7 +1044,8 @@
             <div class="col-span-1 md:col-span-1">
                 <div class="flex items-center gap-3 mb-8">
                     <div class="w-8 h-8 flex items-center justify-center">
-                        <svg viewBox="0 0 100 100" class="w-full h-full fill-green-500">
+                        <svg viewBox="0 0 100 100" class="w-full h-full fill-green-500" role="img" aria-labelledby="footerLogoTitle">
+                            <title id="footerLogoTitle">Логотип InService</title>
                             <path d="M50 5 L90 25 L90 75 L50 95 L10 75 L10 25 Z" fill="none" stroke="currentColor" stroke-width="8" class="stroke-green-500"></path>
                             <circle cx="50" cy="50" r="15" class="fill-green-500"></circle>
                         </svg>
@@ -1011,9 +1130,14 @@
         if(e.target.id === 'orderModal') closeModal();
     });
 
-    // AUTO-PUSH TRIGGER (After 10 seconds)
+    // AUTO-PUSH TRIGGER (After 30 seconds, once per session)
     window.addEventListener('load', () => {
-        setTimeout(openModal, 10000); 
+        if (!sessionStorage.getItem('modal_shown')) {
+            setTimeout(() => {
+                openModal();
+                sessionStorage.setItem('modal_shown', 'true');
+            }, 30000);
+        }
     });
 
     // --- Advanced Analytics & Audiences ---
@@ -1093,6 +1217,25 @@
             });
             gtag('event', 'form_submission', { 'event_label': subject });
         });
+    });
+</script>
+
+<!-- SCROLL TO TOP BUTTON -->
+<button id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-6 left-6 z-[9998] w-12 h-12 bg-white/5 backdrop-blur-md border border-white/10 rounded-full flex items-center justify-center text-gray-400 hover:text-green-500 hover:border-green-500/50 transition-all duration-300 opacity-0 translate-y-4 pointer-events-none" aria-label="Прокрутити нагору">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+</button>
+<script>
+    window.addEventListener('scroll', () => {
+        const btn = document.getElementById('scrollTopBtn');
+        if (window.scrollY > 600) {
+            btn.style.opacity = '1';
+            btn.style.transform = 'translateY(0)';
+            btn.style.pointerEvents = 'auto';
+        } else {
+            btn.style.opacity = '0';
+            btn.style.transform = 'translateY(1rem)';
+            btn.style.pointerEvents = 'none';
+        }
     });
 </script>
 </body>

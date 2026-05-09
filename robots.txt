@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yaroslav775-eng.github.io/inservice-parts/sitemap.xml
